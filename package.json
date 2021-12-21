@@ -1,0 +1,25 @@
+{
+  "name": "guides_js",
+  "version": "0.0.9",
+  "description": "Integration Tools for developer front. Photoshop features for yout browser.",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raficraft/guides_standAlone_for_npm.git"
+  },
+  "keywords": [
+    "Guides"
+  ],
+  "author": "raficraft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raficraft/guides_standAlone_for_npm/issues"
+  },
+  "homepage": "https://github.com/raficraft/guides_standAlone_for_npm#readme"
+}
