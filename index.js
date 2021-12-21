@@ -1,7 +1,5 @@
 require("./index.css");
-var $iwYpZ$babelruntimehelpersclassCallCheck = require("@babel/runtime/helpers/classCallCheck");
-var $iwYpZ$babelruntimehelperscreateClass = require("@babel/runtime/helpers/createClass");
-var $iwYpZ$babelruntimehelpersdefineProperty = require("@babel/runtime/helpers/defineProperty");
+var $iwYpZ$swchelpers = require("@swc/helpers");
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
@@ -11,41 +9,15 @@ function $parcel$export(e, n, v, s) {
 }
 
 
-
-function $08a7d5afccd80df8$var$ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-    if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(object);
-        if (enumerableOnly) symbols = symbols.filter(function(sym) {
-            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-        });
-        keys.push.apply(keys, symbols);
-    }
-    return keys;
-}
-function $08a7d5afccd80df8$var$_objectSpread(target) {
-    var _arguments = arguments, _loop = function(i) {
-        var source = _arguments[i] != null ? _arguments[i] : {
-        };
-        if (i % 2) $08a7d5afccd80df8$var$ownKeys(Object(source), true).forEach(function(key) {
-            ($parcel$interopDefault($iwYpZ$babelruntimehelpersdefineProperty))(target, key, source[key]);
-        });
-        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-        else $08a7d5afccd80df8$var$ownKeys(Object(source)).forEach(function(key) {
-            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-    };
-    for(var i = 1; i < arguments.length; i++)_loop(i);
-    return target;
-}
-var $08a7d5afccd80df8$export$adc6d72e517d4e6a = function createElementFromHTML(htmlString) {
+var $08a7d5afccd80df8$export$adc6d72e517d4e6a = function(htmlString) {
     var div = document.createElement("div");
-    div.innerHTML = htmlString.trim(); // Change this to div.childNodes to support multiple top-level nodes
+    div.innerHTML = htmlString.trim();
+    // Change this to div.childNodes to support multiple top-level nodes
     return div.firstChild;
 };
-var $08a7d5afccd80df8$export$61fc7d43ac8f84b0 = function debounce(callback, delay) {
+var $08a7d5afccd80df8$export$61fc7d43ac8f84b0 = function(callback, delay) {
     var timer;
-    return function() {
+    return function $08a7d5afccd80df8$export$61fc7d43ac8f84b0() {
         var args = arguments;
         var context = this;
         clearTimeout(timer);
@@ -62,14 +34,14 @@ function $08a7d5afccd80df8$export$f8777a72970d840a(array) {
     }
     return style;
 }
-var $08a7d5afccd80df8$export$84a19d80a0fc97e6 = function removeUniqueEl(selector) {
+var $08a7d5afccd80df8$export$84a19d80a0fc97e6 = function(selector) {
     var removeThis = document.querySelector(selector);
     if (removeThis) removeThis.remove();
 };
-var $08a7d5afccd80df8$export$871b5a9be678db21 = function changeStylesEvent(args) {
+var $08a7d5afccd80df8$export$871b5a9be678db21 = function(args) {
     var initialCss = getComputedStyle(args.el).cssText;
-    var _args = $08a7d5afccd80df8$var$_objectSpread({
-    }, args), el = _args.el, action = _args.action, css = _args.css, _args$preventDefault = _args.preventDefault, preventDefault = _args$preventDefault === void 0 ? true : _args$preventDefault, next = _args.next;
+    var ref = $iwYpZ$swchelpers.objectSpread({
+    }, args), el = ref.el, action = ref.action, css = ref.css, _preventDefault = ref.preventDefault, preventDefault = _preventDefault === void 0 ? true : _preventDefault, next = ref.next;
     var fired = "";
     var reset = "";
     if (action && action === "hover") {
@@ -88,17 +60,19 @@ var $08a7d5afccd80df8$export$871b5a9be678db21 = function changeStylesEvent(args)
         if (preventDefault) e.preventDefault();
         console.log("????");
         for(var key in css)if (Object.hasOwnProperty.call(css, key)) {
-            var element = css[key]; //define new styles
+            var element = css[key];
+            //define new styles
             el.style[key] = element;
         }
     });
     el.addEventListener(reset, function(e) {
         if (preventDefault) e.preventDefault();
-         // replace all initial css properties
+        // replace all initial css properties
         el.style.cssText = initialCss;
         if (next) {
             for(var key in next)if (Object.hasOwnProperty.call(next, key)) {
-                var element = next[key]; //define new styles if element is hover
+                var element = next[key];
+                //define new styles if element is hover
                 el.style[key] = element;
             }
         }
@@ -107,10 +81,10 @@ var $08a7d5afccd80df8$export$871b5a9be678db21 = function changeStylesEvent(args)
 
 
 
-
 var $baf7081dc7041035$export$6dbaf1fff660fe95 = /*#__PURE__*/ function() {
-    function Drag_event() {
-        ($parcel$interopDefault($iwYpZ$babelruntimehelpersclassCallCheck))(this, Drag_event);
+    "use strict";
+    function $baf7081dc7041035$export$6dbaf1fff660fe95() {
+        $iwYpZ$swchelpers.classCallCheck(this, $baf7081dc7041035$export$6dbaf1fff660fe95);
         this.dragPosition = {
             start: {
                 x: 0,
@@ -122,7 +96,7 @@ var $baf7081dc7041035$export$6dbaf1fff660fe95 = /*#__PURE__*/ function() {
             }
         };
     }
-    ($parcel$interopDefault($iwYpZ$babelruntimehelperscreateClass))(Drag_event, [
+    $iwYpZ$swchelpers.createClass($baf7081dc7041035$export$6dbaf1fff660fe95, [
         {
             key: "dragStart",
             value: function dragStart(e) {
@@ -149,7 +123,7 @@ var $baf7081dc7041035$export$6dbaf1fff660fe95 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return Drag_event;
+    return $baf7081dc7041035$export$6dbaf1fff660fe95;
 }();
 
 
@@ -169,14 +143,16 @@ $553c72c17236c2cd$export$89da14300d534261 = "_active_640a62";
 
 
 var $f3f86e883dc3cb37$export$4b08aed5f1ec6952 = /*#__PURE__*/ function() {
-    function UI() {
-        ($parcel$interopDefault($iwYpZ$babelruntimehelpersclassCallCheck))(this, UI);
+    "use strict";
+    function $f3f86e883dc3cb37$export$4b08aed5f1ec6952() {
+        $iwYpZ$swchelpers.classCallCheck(this, $f3f86e883dc3cb37$export$4b08aed5f1ec6952);
         console.log("init_UI");
-        this.UI_body(); //This menu is unactive in stand alone version.
+        this.UI_body();
+        //This menu is unactive in stand alone version.
         //this.UI_menu();
         this.dragEvent = new $baf7081dc7041035$export$6dbaf1fff660fe95();
     }
-    ($parcel$interopDefault($iwYpZ$babelruntimehelperscreateClass))(UI, [
+    $iwYpZ$swchelpers.createClass($f3f86e883dc3cb37$export$4b08aed5f1ec6952, [
         {
             key: "UI_body",
             value: function UI_body() {
@@ -186,7 +162,7 @@ var $f3f86e883dc3cb37$export$4b08aed5f1ec6952 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return UI;
+    return $f3f86e883dc3cb37$export$4b08aed5f1ec6952;
 }();
 
 
@@ -194,11 +170,9 @@ var $f3f86e883dc3cb37$export$4b08aed5f1ec6952 = /*#__PURE__*/ function() {
 
 
 
-
-
 var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
-    span_axis_X: function span_axis_X(position, color) {
-        var thickness = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    span_axis_X: function(position, color, param) {
+        var thickness = param === void 0 ? 1 : param;
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             background: "linear-gradient(to bottom,\n        transparent 3px,\n        ".concat(color, " 3px,\n        ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n        transparent ").concat(parseInt(thickness) + 3, "px ,\n        transparent ").concat(parseInt(thickness) + 5, "px\n        )"),
             height: "".concat(parseInt(thickness) + 4, "px"),
@@ -207,8 +181,8 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             position: "absolute"
         });
     },
-    span_axis_Y: function span_axis_Y(position, color) {
-        var thickness = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    span_axis_Y: function(position, color, param) {
+        var thickness = param === void 0 ? 1 : param;
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             background: "linear-gradient(to left, \n        transparent 3px,\n        ".concat(color, " 3px,\n        ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n        transparent ").concat(parseInt(thickness) + 3, "px ,\n        transparent ").concat(parseInt(thickness) + 5, "px\n        )"),
             height: "100%",
@@ -217,7 +191,7 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             position: "fixed"
         });
     },
-    span_pseudoEl_X_before: function span_pseudoEl_X_before(color) {
+    span_pseudoEl_X_before: function(color) {
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             top: "-5px",
             left: "0px",
@@ -226,7 +200,7 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             "border-left": "8px solid ".concat(color)
         });
     },
-    span_pseudoEl_X_after: function span_pseudoEl_X_after(color) {
+    span_pseudoEl_X_after: function(color) {
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             top: "-5px",
             right: "0",
@@ -235,7 +209,7 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             "border-bottom": "8px solid transparent"
         });
     },
-    span_pseudoEl_Y_before: function span_pseudoEl_Y_before(color) {
+    span_pseudoEl_Y_before: function(color) {
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             top: "0",
             right: "-3px",
@@ -244,7 +218,7 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             "border-left": "8px solid transparent"
         });
     },
-    span_pseudoEl_Y_after: function span_pseudoEl_Y_after(color) {
+    span_pseudoEl_Y_after: function(color) {
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             bottom: "0",
             right: "-3px",
@@ -253,7 +227,7 @@ var $069ff03ea42df4f6$export$bcbbd831497ce88 = {
             "border-left": "8px solid transparent"
         });
     },
-    contextMenu: function contextMenu(X, Y) {
+    contextMenu: function(X, Y) {
         return $08a7d5afccd80df8$export$f8777a72970d840a({
             left: X,
             top: Y
@@ -296,11 +270,12 @@ $93509171e9f96b5d$export$611455ef14a12093 = "_contextMenu_blocInput_2ee2f9";
 
 
 var $1e812745baee1e97$export$69e780ca9f7a6d74 = /*#__PURE__*/ function() {
-    function Create_guides() {
-        ($parcel$interopDefault($iwYpZ$babelruntimehelpersclassCallCheck))(this, Create_guides);
+    "use strict";
+    function $1e812745baee1e97$export$69e780ca9f7a6d74() {
+        $iwYpZ$swchelpers.classCallCheck(this, $1e812745baee1e97$export$69e780ca9f7a6d74);
         this.dragEvent = new $baf7081dc7041035$export$6dbaf1fff660fe95();
     }
-    ($parcel$interopDefault($iwYpZ$babelruntimehelperscreateClass))(Create_guides, [
+    $iwYpZ$swchelpers.createClass($1e812745baee1e97$export$69e780ca9f7a6d74, [
         {
             key: "get_guides",
             value: function get_guides(e, direction, color, thickness) {
@@ -353,7 +328,7 @@ var $1e812745baee1e97$export$69e780ca9f7a6d74 = /*#__PURE__*/ function() {
         {
             key: "get_contextMenu",
             value: function get_contextMenu(e1) {
-                var _this = this;
+                var _this = this, _this1 = this;
                 $08a7d5afccd80df8$export$84a19d80a0fc97e6('[data-type="contextmenu"]');
                 var X = e1.pageX > window.innerWidth - 100 ? "".concat(e1.pageX - 150, "px") : "".concat(e1.pageX, "px");
                 var Y = e1.pageY > window.innerHeight - 80 ? "".concat(e1.pageY - 80, "px") : "".concat(e1.pageY, "px");
@@ -368,15 +343,16 @@ var $1e812745baee1e97$export$69e780ca9f7a6d74 = /*#__PURE__*/ function() {
                     _this.dragEvent.dragStart(e);
                 });
                 el_STRING.addEventListener("dragend", function(e) {
-                    _this.dragEvent.dragEnd(e, el_STRING);
+                    _this1.dragEvent.dragEnd(e, el_STRING);
                 });
                 return [
                     el_STRING,
                     interactionElement
                 ];
-            } //Show All Guides in localStorage
+            }
         },
         {
+            //Show All Guides in localStorage
             key: "deployStorage",
             value: function deployStorage(items, color) {
                 if (items) {
@@ -394,27 +370,27 @@ var $1e812745baee1e97$export$69e780ca9f7a6d74 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return Create_guides;
+    return $1e812745baee1e97$export$69e780ca9f7a6d74;
 }();
 
 
 
 
-
 var $7759ad9a051faebd$export$191e63b17214d70d = /*#__PURE__*/ function() {
-    function ManageStorage() {
-        ($parcel$interopDefault($iwYpZ$babelruntimehelpersclassCallCheck))(this, ManageStorage);
+    "use strict";
+    function $7759ad9a051faebd$export$191e63b17214d70d() {
+        $iwYpZ$swchelpers.classCallCheck(this, $7759ad9a051faebd$export$191e63b17214d70d);
         this.currentStorage = [];
         this.UI_body = document.getElementById("UI_body");
     }
-    ($parcel$interopDefault($iwYpZ$babelruntimehelperscreateClass))(ManageStorage, [
+    $iwYpZ$swchelpers.createClass($7759ad9a051faebd$export$191e63b17214d70d, [
         {
             key: "manage",
             value: function manage(target) {
-                var _this = this;
                 // debugger
                 switch(target){
                     case "guides":
+                        var _this = this;
                         if (localStorage.getItem("guides")) localStorage.clear();
                         var allGuides = this.UI_body.querySelectorAll('[data-type="guides"]');
                         this.currentStorage = [];
@@ -427,14 +403,15 @@ var $7759ad9a051faebd$export$191e63b17214d70d = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return ManageStorage;
+    return $7759ad9a051faebd$export$191e63b17214d70d;
 }();
 
 
 var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
-    function Guides() {
-        var _this = this;
-        ($parcel$interopDefault($iwYpZ$babelruntimehelpersclassCallCheck))(this, Guides);
+    "use strict";
+    function $8c4157cb11a74ad2$export$79bc953678f776f7() {
+        var _this8 = this, _this1 = this, _this2 = this, _this3 = this, _this4 = this;
+        $iwYpZ$swchelpers.classCallCheck(this, $8c4157cb11a74ad2$export$79bc953678f776f7);
         this.ctrlKey = null;
         this.shiftKey = null;
         this.controlUser = {
@@ -449,79 +426,83 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
         this.showContextMenu = false;
         this.UI_body = document.getElementById("UI_body");
         this.create = new $1e812745baee1e97$export$69e780ca9f7a6d74();
-        this.manageStorage = new $7759ad9a051faebd$export$191e63b17214d70d(); //Catch event press key
+        this.manageStorage = new $7759ad9a051faebd$export$191e63b17214d70d();
+        //Catch event press key
         document.addEventListener("keydown", function(e) {
-            e.ctrlKey && (_this.ctrlKey = true);
-            e.shiftKey && (_this.shiftKey = true);
-            if (_this.ctrlKey === true && _this.shiftKey === true) {
-                if (_this.showGuides) _this.switch_UI("hidden");
-                else _this.switch_UI("show");
+            e.ctrlKey && (_this8.ctrlKey = true);
+            e.shiftKey && (_this8.shiftKey = true);
+            if (_this8.ctrlKey === true && _this8.shiftKey === true) {
+                if (_this8.showGuides) _this8.switch_UI("hidden");
+                else _this8.switch_UI("show");
             }
         });
         /** When keyControlas null , can't add guides */ document.addEventListener("keyup", function(e) {
-            _this.ctrlKey = false;
-            _this.shiftKey = false;
-            _this.deleteKey = false;
+            _this1.ctrlKey = false;
+            _this1.shiftKey = false;
+            _this1.deleteKey = false;
         });
         /**
      * Trigger addGuides if shift or ctrl as pressed
      * Define the current direction X OR Y
      */ document.addEventListener("mousedown", function(e) {
             //this.showGuides = true;
-            _this.ctrlKey && _this.add_guides(e, "X");
-            _this.shiftKey && _this.add_guides(e, "Y");
-            if (document.querySelectorAll('[data-type="guides"]').length) _this.switch_UI("show");
-            _this.ctrlKey = false;
-            _this.shiftKey = false;
+            _this2.ctrlKey && _this2.add_guides(e, "X");
+            _this2.shiftKey && _this2.add_guides(e, "Y");
+            if (document.querySelectorAll('[data-type="guides"]').length) _this2.switch_UI("show");
+            _this2.ctrlKey = false;
+            _this2.shiftKey = false;
         });
         document.addEventListener("mouseup", function(e) {
         });
         /** this event is only triggered when the user maintains
      *  the right click on a mark and performs a movement with the mouse */ document.addEventListener("mousemove", $08a7d5afccd80df8$export$61fc7d43ac8f84b0(function(e) {
             e.preventDefault();
-            if (_this.controlUser.grab && _this.controlUser.move) {
-                if (_this.currentItem.dataset.direction === "X") {
-                    _this.currentItem.style.top = e.pageY + "px";
-                    _this.currentItem.dataset.position = e.pageY;
-                    _this.inputEl.value = e.pageY;
-                } else if (_this.currentItem.dataset.direction === "Y") {
-                    _this.currentItem.style.left = e.pageX + "px";
-                    _this.currentItem.dataset.position = e.pageX;
-                    _this.inputEl.value = e.pageX;
+            if (_this3.controlUser.grab && _this3.controlUser.move) {
+                if (_this3.currentItem.dataset.direction === "X") {
+                    _this3.currentItem.style.top = e.pageY + "px";
+                    _this3.currentItem.dataset.position = e.pageY;
+                    _this3.inputEl.value = e.pageY;
+                } else if (_this3.currentItem.dataset.direction === "Y") {
+                    _this3.currentItem.style.left = e.pageX + "px";
+                    _this3.currentItem.dataset.position = e.pageX;
+                    _this3.inputEl.value = e.pageX;
                 }
             }
         }), 300);
         this.UI_body.addEventListener("contextmenu", function(e1) {
-            if (_this.controlUser.hover) {
+            if (_this4.controlUser.hover) {
+                var _this = _this4, _this5 = _this4, _this6 = _this4, _this7 = _this4;
                 e1.preventDefault();
-                _this.getContextMenu = _this.create.get_contextMenu(e1);
-                _this.showContextMenu = true;
-                _this.contextMenu = _this.getContextMenu[0];
-                _this.interactiveElement = _this.getContextMenu[1];
-                _this.UI_body.insertAdjacentElement("afterBegin", _this.contextMenu);
-                _this.interactiveElement.change_thickness.value = _this.currentItem.dataset.height; //add event for interactive of contextMenu
-                _this.interactiveElement.deleteBtn.addEventListener("click", function(e) {
+                _this4.getContextMenu = _this4.create.get_contextMenu(e1);
+                _this4.showContextMenu = true;
+                _this4.contextMenu = _this4.getContextMenu[0];
+                _this4.interactiveElement = _this4.getContextMenu[1];
+                _this4.UI_body.insertAdjacentElement("afterBegin", _this4.contextMenu);
+                _this4.interactiveElement.change_thickness.value = _this4.currentItem.dataset.height;
+                //add event for interactive of contextMenu
+                _this4.interactiveElement.deleteBtn.addEventListener("click", function(e) {
                     _this.deleteGuides();
                 });
-                _this.interactiveElement.change_thickness.addEventListener("change", function(e) {
-                    _this.changeThickness(e);
+                _this4.interactiveElement.change_thickness.addEventListener("change", function(e) {
+                    _this5.changeThickness(e);
                 });
-                _this.interactiveElement.changeColor.addEventListener("change", function(e) {
-                    _this.changeColor_guides(e);
+                _this4.interactiveElement.changeColor.addEventListener("change", function(e) {
+                    _this6.changeColor_guides(e);
                 });
-                _this.interactiveElement.close_contextMenu.addEventListener("click", function(e) {
-                    _this.contextMenu.remove();
+                _this4.interactiveElement.close_contextMenu.addEventListener("click", function(e) {
+                    _this7.contextMenu.remove();
                 });
             }
-        }); //localStorage.clear()
+        });
+        //localStorage.clear()
         this.injectGuidesInStorage();
     }
-    /****************************************/ /****************************************/ /*****       GUIDES  METHOD         *****/ /****************************************/ /****************************************/ /**
+    $iwYpZ$swchelpers.createClass($8c4157cb11a74ad2$export$79bc953678f776f7, [
+        {
+            /****************************************/ /****************************************/ /*****       GUIDES  METHOD         *****/ /****************************************/ /****************************************/ /**
    * @param {*} e
    * @param {string} direction
-   */ ($parcel$interopDefault($iwYpZ$babelruntimehelperscreateClass))(Guides, [
-        {
-            key: "add_guides",
+   */ key: "add_guides",
             value: function add_guides(e, direction) {
                 if (direction === "X" || direction === "Y") {
                     var elHtml = $08a7d5afccd80df8$export$adc6d72e517d4e6a(this.create.get_guides(e, direction, this.currentColor, 1));
@@ -529,73 +510,80 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
                     this.addGuidesEvent(elHtml);
                     this.currentItem = elHtml;
                     document.querySelectorAll('[data-type="guides"]').length === 1 && this.addUI();
-                    this.inputEl.value = this.currentItem.dataset.position; //storage
+                    this.inputEl.value = this.currentItem.dataset.position;
+                    //storage
                     this.manageStorage.manage("guides");
                     this.defineTerminal(this.currentItem);
                 }
             }
         },
         {
-            key: "addGuidesEvent",
+            /**
+   * @param {HTML_element} item
+   */ key: "addGuidesEvent",
             value: function addGuidesEvent(item) {
-                var _this2 = this;
+                var _this = this, _this9 = this, _this10 = this, _this11 = this;
                 // Mouse grab
                 item.addEventListener("mouseover", function(e) {
                     item.style.cursor = "pointer";
-                    _this2.controlUser.grab = true;
-                    _this2.controlUser.hover = true;
-                }); // Mouse Down
+                    _this.controlUser.grab = true;
+                    _this.controlUser.hover = true;
+                });
+                // Mouse Down
                 item.addEventListener("mousedown", function(e) {
                     e.preventDefault();
-                    _this2.currentItem = item;
-                    _this2.inputEl.value = item.dataset.position;
-                    _this2.inputEl.focus();
-                    if (_this2.showContextMenu) _this2.interactiveElement.change_thickness.value = item.dataset.height;
-                    if (_this2.controlUser.grab) {
-                        _this2.controlUser.move = true;
-                        _this2.currentItem = item;
-                        _this2.defineTerminal(item);
+                    _this9.currentItem = item;
+                    _this9.inputEl.value = item.dataset.position;
+                    _this9.inputEl.focus();
+                    if (_this9.showContextMenu) _this9.interactiveElement.change_thickness.value = item.dataset.height;
+                    if (_this9.controlUser.grab) {
+                        _this9.controlUser.move = true;
+                        _this9.currentItem = item;
+                        _this9.defineTerminal(item);
                     }
-                }); //Mouse Out
+                });
+                //Mouse Out
                 item.addEventListener("mouseout", function(e) {
-                    _this2.controlUser.hover = null;
-                    if (_this2.controlUser.grab && _this2.controlUser.move) _this2.controlUser.move = true;
-                }); //Mouse up , cancel mouvement of guides
+                    _this10.controlUser.hover = null;
+                    if (_this10.controlUser.grab && _this10.controlUser.move) _this10.controlUser.move = true;
+                });
+                //Mouse up , cancel mouvement of guides
                 item.addEventListener("mouseup", $08a7d5afccd80df8$export$61fc7d43ac8f84b0(function(e) {
-                    _this2.controlUser.grab = null;
-                    _this2.controlUser.move = null;
-                    _this2.manageStorage.manage("guides");
+                    _this11.controlUser.grab = null;
+                    _this11.controlUser.move = null;
+                    _this11.manageStorage.manage("guides");
                 }), 300);
             }
         },
         {
             key: "changeGuidesPosition",
-            value: //Changes guides position by mouse move
+            value: //Event for User Interface
+            //Changes guides position by mouse move
             function changeGuidesPosition(e) {
                 var initialValue = parseInt(e.target.value);
                 var direction = this.currentItem.dataset.direction;
                 this.currentItem.dataset.position = initialValue;
                 this.inputEl.value = initialValue + "px";
                 direction === "X" ? this.currentItem.style.top = initialValue + "px" : this.currentItem.style.left = initialValue + "px";
-            } //Changes guides position with keyboard arrow
+            }
         },
         {
             key: "injectGuidesInStorage",
             value: function injectGuidesInStorage() {
-                var _this3 = this;
                 if (localStorage.getItem("guides")) {
+                    var _this = this, _this12 = this;
                     var res = JSON.parse(localStorage.getItem("guides"));
                     this.currentStorage = [];
                     res.forEach(function(item) {
-                        _this3.currentStorage.push(item);
+                        _this.currentStorage.push(item);
                     });
                     var guidesCollection = this.create.deployStorage(this.currentStorage, this.currentColor);
                     var injectEl = "";
                     guidesCollection.forEach(function(item, key) {
                         injectEl = $08a7d5afccd80df8$export$adc6d72e517d4e6a(item);
-                        _this3.addGuidesEvent(injectEl);
-                        _this3.UI_body.insertAdjacentElement("afterBegin", injectEl);
-                        injectEl.style.background = _this3.makeGradient(injectEl.dataset.direction, _this3.currentColor, injectEl.dataset.height);
+                        _this12.addGuidesEvent(injectEl);
+                        _this12.UI_body.insertAdjacentElement("afterBegin", injectEl);
+                        injectEl.style.background = _this12.makeGradient(injectEl.dataset.direction, _this12.currentColor, injectEl.dataset.height);
                     });
                     var currentIndex = guidesCollection.length - 1;
                     this.currentItem = $08a7d5afccd80df8$export$adc6d72e517d4e6a(guidesCollection[currentIndex]);
@@ -607,7 +595,7 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             }
         },
         {
-            key: "addUI",
+            /****************************************/ /****************************************/ /****       GUIDES UI Method         ****/ /****************************************/ /****************************************/ key: "addUI",
             value: function addUI() {
                 var getUI = this.create.get_UI();
                 this.UI_body.insertAdjacentElement("afterBegin", getUI[0]);
@@ -618,18 +606,19 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
         {
             key: "initUI_event",
             value: function initUI_event(item) {
-                var _this4 = this;
+                var _this = this, _this13 = this;
                 //Cursor position, display in UI
                 this.inputEl = item;
                 this.inputEl.addEventListener("change", function(e) {
-                    _this4.changeGuidesPosition(e);
+                    _this.changeGuidesPosition(e);
                 });
                 this.inputEl.addEventListener("keydown", function(e) {
-                    _this4.changeGuidesPositionByKeys(e);
+                    _this13.changeGuidesPositionByKeys(e);
                 });
             }
         },
         {
+            //Changes guides position with keyboard arrow
             key: "changeGuidesPositionByKeys",
             value: function changeGuidesPositionByKeys(e) {
                 var intValue = parseInt(e.target.value);
@@ -647,7 +636,9 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             }
         },
         {
-            key: "defineTerminal",
+            /****************************************/ /****************************************/ /****       TERMINAL METHOD         *****/ /****************************************/ /****************************************/ /**
+   * @param {HTML_element} item
+   */ key: "defineTerminal",
             value: function defineTerminal(item) {
                 this.showContextMenu;
                 this.removeTerminal();
@@ -666,7 +657,7 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             }
         },
         {
-            key: "deleteGuides",
+            /****************************************/ /****************************************/ /****      CONTEXT MENU METHOD      *****/ /****************************************/ /****************************************/ key: "deleteGuides",
             value: function deleteGuides() {
                 this.controlUser.grab && this.currentItem.remove();
                 this.currentItem.remove();
@@ -676,13 +667,15 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
                     var lastIndex = allGuides.length - 1;
                     this.currentItem = allGuides[lastIndex];
                     this.defineTerminal(this.currentItem);
-                } //If the last guides as delete
+                }
+                //If the last guides as delete
                 if (!document.querySelectorAll('[data-type="guides"]').length) {
                     //Remove storage
                     var UI = document.querySelector('[data-type="UI"]');
                     UI.remove();
                     localStorage.removeItem("guides");
-                } //Check if user exprience is good
+                }
+            //Check if user exprience is good
             //this.contextMenu.remove();
             }
         },
@@ -702,11 +695,11 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
         {
             key: "changeColor_guides",
             value: function changeColor_guides(e) {
-                var _this5 = this;
+                var _this = this, _this14 = this;
                 var guidesCollection = document.querySelectorAll('[data-type="guides"]');
                 this.currentColor = e.target.value;
                 guidesCollection.forEach(function(item) {
-                    item.style.background = _this5.makeGradient(item.dataset.offsetby, _this5.currentColor, item.dataset.height);
+                    item.style.background = _this.makeGradient(item.dataset.offsetby, _this.currentColor, item.dataset.height);
                 });
                 var terminals = document.querySelectorAll('[data-type="terminal"]');
                 terminals.forEach(function(item) {
@@ -719,12 +712,12 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
                         else if (item.dataset.el === "after") borderType = "bottom";
                     }
                     var constructRules = "border-".concat(borderType);
-                    item.style[constructRules] = "8px solid ".concat(_this5.currentColor);
+                    item.style[constructRules] = "8px solid ".concat(_this14.currentColor);
                 });
             }
         },
         {
-            key: "makeGradient",
+            /****************************************/ /****************************************/ /****      UTILS METHOD             *****/ /****************************************/ /****************************************/ key: "makeGradient",
             value: function makeGradient(direction, color, thickness) {
                 var gradient = "transparent 3px, \n  ".concat(color, " 3px,\n  ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n  transparent ").concat(parseInt(thickness) + 3, "px ,\n  transparent ").concat(parseInt(thickness) + 5, "px");
                 return "linear-gradient(to ".concat(direction, ", ").concat(gradient, ")");
@@ -743,7 +736,7 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return Guides;
+    return $8c4157cb11a74ad2$export$79bc953678f776f7;
 }();
 
 

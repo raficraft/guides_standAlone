@@ -8,7 +8,8 @@ function $parcel$export(e, n, v, s) {
 }
 const $9b26f7b4737a23ee$export$adc6d72e517d4e6a = (htmlString)=>{
     const div = document.createElement("div");
-    div.innerHTML = htmlString.trim(); // Change this to div.childNodes to support multiple top-level nodes
+    div.innerHTML = htmlString.trim();
+    // Change this to div.childNodes to support multiple top-level nodes
     return div.firstChild;
 };
 const $9b26f7b4737a23ee$export$61fc7d43ac8f84b0 = (callback, delay)=>{
@@ -26,7 +27,7 @@ function $9b26f7b4737a23ee$export$f8777a72970d840a(array) {
     let style = "";
     for(const key in array)if (Object.hasOwnProperty.call(array, key)) {
         const element = array[key];
-        style += "".concat(key, " : ").concat(element, "; ");
+        style += `${key} : ${element}; `;
     }
     return style;
 }
@@ -57,17 +58,19 @@ const $9b26f7b4737a23ee$export$871b5a9be678db21 = (args)=>{
         if (preventDefault) e.preventDefault();
         console.log("????");
         for(const key in css)if (Object.hasOwnProperty.call(css, key)) {
-            const element = css[key]; //define new styles
+            const element = css[key];
+            //define new styles
             el.style[key] = element;
         }
     });
     el.addEventListener(reset, (e)=>{
         if (preventDefault) e.preventDefault();
-         // replace all initial css properties
+        // replace all initial css properties
         el.style.cssText = initialCss;
         if (next) {
             for(const key in next)if (Object.hasOwnProperty.call(next, key)) {
-                const element = next[key]; //define new styles if element is hover
+                const element = next[key];
+                //define new styles if element is hover
                 el.style[key] = element;
             }
         }
@@ -128,12 +131,13 @@ $15b8801333d4c6bd$export$89da14300d534261 = "_active_640a62";
 class $6d4806093792670e$export$4b08aed5f1ec6952 {
     UI_body() {
         // Add Terminal view, for inject all HTML element for the project.
-        this.UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a("<section id=\"UI_body\" class=\"".concat((/*@__PURE__*/$parcel$interopDefault($15b8801333d4c6bd$exports)).UI_body, "\"></section>"));
+        this.UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section id="UI_body" class="${(/*@__PURE__*/$parcel$interopDefault($15b8801333d4c6bd$exports)).UI_body}"></section>`);
         document.body.insertAdjacentElement("beforeBegin", this.UI);
     }
     constructor(){
         console.log("init_UI");
-        this.UI_body(); //This menu is unactive in stand alone version.
+        this.UI_body();
+        //This menu is unactive in stand alone version.
         //this.UI_menu();
         this.dragEvent = new $60470c96b7efe180$export$6dbaf1fff660fe95();
     }
@@ -143,23 +147,33 @@ class $6d4806093792670e$export$4b08aed5f1ec6952 {
 
 
 const $0b1328cf225e4578$export$bcbbd831497ce88 = {
-    span_axis_X: function(position, color) {
-        let thickness = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    span_axis_X: (position, color, thickness = 1)=>{
         return $9b26f7b4737a23ee$export$f8777a72970d840a({
-            background: "linear-gradient(to bottom,\n        transparent 3px,\n        ".concat(color, " 3px,\n        ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n        transparent ").concat(parseInt(thickness) + 3, "px ,\n        transparent ").concat(parseInt(thickness) + 5, "px\n        )"),
-            height: "".concat(parseInt(thickness) + 4, "px"),
+            background: `linear-gradient(to bottom,
+        transparent 3px,
+        ${color} 3px,
+        ${color} ${parseInt(thickness) + 3}px,
+        transparent ${parseInt(thickness) + 3}px ,
+        transparent ${parseInt(thickness) + 5}px
+        )`,
+            height: `${parseInt(thickness) + 4}px`,
             width: "100%",
-            top: "".concat(position, "px"),
+            top: `${position}px`,
             position: "absolute"
         });
     },
-    span_axis_Y: function(position, color) {
-        let thickness = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    span_axis_Y: (position, color, thickness = 1)=>{
         return $9b26f7b4737a23ee$export$f8777a72970d840a({
-            background: "linear-gradient(to left, \n        transparent 3px,\n        ".concat(color, " 3px,\n        ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n        transparent ").concat(parseInt(thickness) + 3, "px ,\n        transparent ").concat(parseInt(thickness) + 5, "px\n        )"),
+            background: `linear-gradient(to left, 
+        transparent 3px,
+        ${color} 3px,
+        ${color} ${parseInt(thickness) + 3}px,
+        transparent ${parseInt(thickness) + 3}px ,
+        transparent ${parseInt(thickness) + 5}px
+        )`,
             height: "100%",
-            width: "".concat(parseInt(thickness) + 4, "px"),
-            left: "".concat(position, "px"),
+            width: `${parseInt(thickness) + 4}px`,
+            left: `${position}px`,
             position: "fixed"
         });
     },
@@ -169,7 +183,7 @@ const $0b1328cf225e4578$export$bcbbd831497ce88 = {
             left: "0px",
             "border-top": "8px solid transparent",
             "border-bottom": "8px solid transparent",
-            "border-left": "8px solid ".concat(color)
+            "border-left": `8px solid ${color}`
         });
     },
     span_pseudoEl_X_after: (color)=>{
@@ -177,7 +191,7 @@ const $0b1328cf225e4578$export$bcbbd831497ce88 = {
             top: "-5px",
             right: "0",
             "border-top": "8px solid transparent",
-            "border-right": "8px solid ".concat(color),
+            "border-right": `8px solid ${color}`,
             "border-bottom": "8px solid transparent"
         });
     },
@@ -185,7 +199,7 @@ const $0b1328cf225e4578$export$bcbbd831497ce88 = {
         return $9b26f7b4737a23ee$export$f8777a72970d840a({
             top: "0",
             right: "-3px",
-            "border-top": "8px solid ".concat(color),
+            "border-top": `8px solid ${color}`,
             "border-right": "8px solid transparent",
             "border-left": "8px solid transparent"
         });
@@ -195,7 +209,7 @@ const $0b1328cf225e4578$export$bcbbd831497ce88 = {
             bottom: "0",
             right: "-3px",
             "border-right": "8px solid transparent",
-            "border-bottom": "8px solid ".concat(color),
+            "border-bottom": `8px solid ${color}`,
             "border-left": "8px solid transparent"
         });
     },
@@ -252,7 +266,17 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
         direction === "X" ? offsetBy = "top" : offsetBy = "left";
         direction === "X" ? position = e2.pageY : position = e2.pageX;
         direction === "X" ? stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_X(e2.pageY, color, 1) : stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_Y(e2.pageX, color, 1);
-        const el_STRING = "<span\n        class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides, "\"\n        style=\"").concat(stylesSpan_Axis, "\"\n        data-type=\"guides\"\n        data-direction=\"").concat(direction, "\"\n        data-offsetby=\"").concat(offsetBy, "\"\n        data-count=\"").concat(nbGuides++, "\"\n        data-position=\"").concat(position, "\"\n        data-current=\"true\"\n        data-height=\"1\"></span>\n      >");
+        const el_STRING = `<span
+        class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides}"
+        style="${stylesSpan_Axis}"
+        data-type="guides"
+        data-direction="${direction}"
+        data-offsetby="${offsetBy}"
+        data-count="${nbGuides++}"
+        data-position="${position}"
+        data-current="true"
+        data-height="1"></span>
+      >`;
         return el_STRING;
     }
     addTerminal(item1, color1) {
@@ -269,13 +293,28 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
             styles_PseudoEl_Axis.after = $0b1328cf225e4578$export$bcbbd831497ce88.span_pseudoEl_Y_after(color1);
         }
         const pseudoEl = {
-            before: $9b26f7b4737a23ee$export$adc6d72e517d4e6a("<span\n          class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides_pseudoEL, "\"\n          data-type=\"terminal\" \n          data-direction=\"").concat(axis, "\" \n          data-el=\"before\"\n          style=\"").concat(styles_PseudoEl_Axis.before, "\">\n        </span>")),
-            after: $9b26f7b4737a23ee$export$adc6d72e517d4e6a("<span \n          class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides_pseudoEL, "\"\n          data-type=\"terminal\"\n          data-direction=\"").concat(axis, "\"\n          data-el=\"after\"\n          style=\"").concat(styles_PseudoEl_Axis.after, "\">\n        </span>"))
+            before: $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<span
+          class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides_pseudoEL}"
+          data-type="terminal" 
+          data-direction="${axis}" 
+          data-el="before"
+          style="${styles_PseudoEl_Axis.before}">
+        </span>`),
+            after: $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<span 
+          class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides_pseudoEL}"
+          data-type="terminal"
+          data-direction="${axis}"
+          data-el="after"
+          style="${styles_PseudoEl_Axis.after}">
+        </span>`)
         };
         return pseudoEl;
     }
     get_UI() {
-        const UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a("<div class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).UI_guides__container, "\" data-type=\"UI\">\n      <label>X || Y</label>\n      <input id=\"log_guides\" value=\"0\" />\n    </div>"));
+        const UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).UI_guides__container}" data-type="UI">
+      <label>X || Y</label>
+      <input id="log_guides" value="0" />
+    </div>`);
         const inputChange = UI.querySelector("input");
         return [
             UI,
@@ -284,9 +323,45 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
     }
     get_contextMenu(e1) {
         $9b26f7b4737a23ee$export$84a19d80a0fc97e6('[data-type="contextmenu"]');
-        const X = e1.pageX > window.innerWidth - 100 ? "".concat(e1.pageX - 150, "px") : "".concat(e1.pageX, "px");
-        const Y = e1.pageY > window.innerHeight - 80 ? "".concat(e1.pageY - 80, "px") : "".concat(e1.pageY, "px");
-        const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a("<section class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu, "\"\n        style=\"").concat($0b1328cf225e4578$export$bcbbd831497ce88.contextMenu(X, Y), "\"  \n        data-type=\"contextmenu\"\n        draggable=\"true\"\n        >\n        <header>\n          <label>Guides</label>\n          <div class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).close_contextMenu, "\"\n            data-action=\"close_context_menu\">\n            <span class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).cross, "\"></span> \n            <span class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).cross, "\"></span> \n          </div>\n        </header>\n        <div class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_content, "\">\n          <div class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput, "\">\n            <input type=\"button\" id=\"del_guides\" value=\"delete\" data-action=\"delete_guides\"/>\n            <label for=\"del_guides\">\n              <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1000 1000\" enable-background=\"new 0 0 1000 1000\" xml:space=\"preserve\">\n                <g><path d=\"M723.9,976H276c-61.8,0-112-50.1-112-111.8V276c0-15.5,12.6-28,28-28s28,12.5,28,28v588.2c0,30.7,25.1,55.8,56,55.8h447.9c30.9,0,56.1-25,56.1-55.8V276c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v588.2C836,925.9,785.7,976,723.9,976z\"/><path d=\"M640,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.5,0,28,12.5,28,28v392C668,795.5,655.4,808,640,808z M500,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v392C528,795.5,515.4,808,500,808z M360,808c-15.5,0-28-12.5-28-28V388c0-15.5,12.5-28,28-28s28,12.5,28,28v392C388,795.5,375.4,808,360,808z M962,220H38c-15.4,0-28-12.5-28-28c0-15.5,12.5-28,28-28h266v-55.9c0-46.4,37.8-84.1,84.2-84.1h223.5c46.5,0,84.2,37.7,84.2,84.1V164h266c15.4,0,28,12.5,28,28C990,207.5,977.4,220,962,220z M360,164h280v-55.9c0-15.5-12.7-28.1-28.2-28.1H388.2c-15.6,0-28.2,12.6-28.2,28.1V164z\"/></g>\n              </svg>\n            </label> \n          </div>\n          <hr>\n          <div class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput, "\">\n            <input type=\"number\" min=\"1\" max=\"500\" max=\"500\" value=\"1\" data-action=\"change_thickness\">\n            <label style=\"").concat($0b1328cf225e4578$export$bcbbd831497ce88.trash_icon, "\" for=\"del_guides\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 68.96 75.21\"><defs><style>.cls-1{fill:#231f20;}.cls-2{fill:#088c44;}</style></defs><title>icon_thickness</title><g id=\"Calque_2\" data-name=\"Calque 2\"><g id=\"Calque_1-2\" data-name=\"Calque 1\"><path class=\"cls-1\" d=\"M66.54,26.3,2.49,26c-3.22,0-3.22,5,0,5l64.05.26c3.22,0,3.22-5,0-5Z\"/><path class=\"cls-1\" d=\"M66.47,44.9,2.41,44.64c-3.21,0-3.22,5,0,5l64.06.26c3.22,0,3.22-5,0-5Z\"/><path class=\"cls-1\" d=\"M32.78,2.41l-.07,17.1c0,3.22,5,3.22,5,0l.07-17.1c0-3.21-5-3.22-5,0Z\"/><path class=\"cls-2\" d=\"M39.77,16.34l-4.56,3.17\"/><path class=\"cls-1\" d=\"M38.51,14.18,34,17.35a2.56,2.56,0,0,0-.9,3.42,2.53,2.53,0,0,0,3.42.9L41,18.5a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9Z\"/><path class=\"cls-1\" d=\"M37,17.74l-4.27-3.55a2.57,2.57,0,0,0-3.53,0,2.52,2.52,0,0,0,0,3.54l4.26,3.55a2.58,2.58,0,0,0,3.54,0,2.53,2.53,0,0,0,0-3.54Z\"/><path class=\"cls-1\" d=\"M37.42,72.8l.33-17.09c.06-3.22-4.94-3.22-5,0L32.42,72.8c-.06,3.22,4.94,3.22,5,0Z\"/><path class=\"cls-2\" d=\"M30.64,58.8l4.61-3.09\"/><path class=\"cls-1\" d=\"M31.91,61l4.6-3.09a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9l-4.61,3.1a2.55,2.55,0,0,0-.89,3.42,2.52,2.52,0,0,0,3.42.89Z\"/><path class=\"cls-1\" d=\"M33.48,57.48l4.22,3.61a2.56,2.56,0,0,0,3.53,0,2.53,2.53,0,0,0,0-3.54L37,53.94a2.56,2.56,0,0,0-3.54,0,2.53,2.53,0,0,0,0,3.54Z\"/></g></g></svg>\n           </label> \n          </div>\n          <hr>\n          <div class=\"").concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput, "\">\n            <input      \n              type=\"color\" data-action=\"changeColor_guides\" value=\"#ff0000\"\n            />          \n          </div>\n        </div>\n      </section>"));
+        const X = e1.pageX > window.innerWidth - 100 ? `${e1.pageX - 150}px` : `${e1.pageX}px`;
+        const Y = e1.pageY > window.innerHeight - 80 ? `${e1.pageY - 80}px` : `${e1.pageY}px`;
+        const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu}"
+        style="${$0b1328cf225e4578$export$bcbbd831497ce88.contextMenu(X, Y)}"  
+        data-type="contextmenu"
+        draggable="true"
+        >
+        <header>
+          <label>Guides</label>
+          <div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).close_contextMenu}"
+            data-action="close_context_menu">
+            <span class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).cross}"></span> 
+            <span class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).cross}"></span> 
+          </div>
+        </header>
+        <div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_content}">
+          <div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput}">
+            <input type="button" id="del_guides" value="delete" data-action="delete_guides"/>
+            <label for="del_guides">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <g><path d="M723.9,976H276c-61.8,0-112-50.1-112-111.8V276c0-15.5,12.6-28,28-28s28,12.5,28,28v588.2c0,30.7,25.1,55.8,56,55.8h447.9c30.9,0,56.1-25,56.1-55.8V276c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v588.2C836,925.9,785.7,976,723.9,976z"/><path d="M640,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.5,0,28,12.5,28,28v392C668,795.5,655.4,808,640,808z M500,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v392C528,795.5,515.4,808,500,808z M360,808c-15.5,0-28-12.5-28-28V388c0-15.5,12.5-28,28-28s28,12.5,28,28v392C388,795.5,375.4,808,360,808z M962,220H38c-15.4,0-28-12.5-28-28c0-15.5,12.5-28,28-28h266v-55.9c0-46.4,37.8-84.1,84.2-84.1h223.5c46.5,0,84.2,37.7,84.2,84.1V164h266c15.4,0,28,12.5,28,28C990,207.5,977.4,220,962,220z M360,164h280v-55.9c0-15.5-12.7-28.1-28.2-28.1H388.2c-15.6,0-28.2,12.6-28.2,28.1V164z"/></g>
+              </svg>
+            </label> 
+          </div>
+          <hr>
+          <div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput}">
+            <input type="number" min="1" max="500" max="500" value="1" data-action="change_thickness">
+            <label style="${$0b1328cf225e4578$export$bcbbd831497ce88.trash_icon}" for="del_guides">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.96 75.21"><defs><style>.cls-1{fill:#231f20;}.cls-2{fill:#088c44;}</style></defs><title>icon_thickness</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M66.54,26.3,2.49,26c-3.22,0-3.22,5,0,5l64.05.26c3.22,0,3.22-5,0-5Z"/><path class="cls-1" d="M66.47,44.9,2.41,44.64c-3.21,0-3.22,5,0,5l64.06.26c3.22,0,3.22-5,0-5Z"/><path class="cls-1" d="M32.78,2.41l-.07,17.1c0,3.22,5,3.22,5,0l.07-17.1c0-3.21-5-3.22-5,0Z"/><path class="cls-2" d="M39.77,16.34l-4.56,3.17"/><path class="cls-1" d="M38.51,14.18,34,17.35a2.56,2.56,0,0,0-.9,3.42,2.53,2.53,0,0,0,3.42.9L41,18.5a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9Z"/><path class="cls-1" d="M37,17.74l-4.27-3.55a2.57,2.57,0,0,0-3.53,0,2.52,2.52,0,0,0,0,3.54l4.26,3.55a2.58,2.58,0,0,0,3.54,0,2.53,2.53,0,0,0,0-3.54Z"/><path class="cls-1" d="M37.42,72.8l.33-17.09c.06-3.22-4.94-3.22-5,0L32.42,72.8c-.06,3.22,4.94,3.22,5,0Z"/><path class="cls-2" d="M30.64,58.8l4.61-3.09"/><path class="cls-1" d="M31.91,61l4.6-3.09a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9l-4.61,3.1a2.55,2.55,0,0,0-.89,3.42,2.52,2.52,0,0,0,3.42.89Z"/><path class="cls-1" d="M33.48,57.48l4.22,3.61a2.56,2.56,0,0,0,3.53,0,2.53,2.53,0,0,0,0-3.54L37,53.94a2.56,2.56,0,0,0-3.54,0,2.53,2.53,0,0,0,0,3.54Z"/></g></g></svg>
+           </label> 
+          </div>
+          <hr>
+          <div class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).contextMenu_blocInput}">
+            <input      
+              type="color" data-action="changeColor_guides" value="#ff0000"
+            />          
+          </div>
+        </div>
+      </section>`);
         const interactionElement = {
             close_contextMenu: el_STRING.querySelector('[data-action="close_context_menu"]'),
             change_thickness: el_STRING.querySelector('[data-action="change_thickness"]'),
@@ -304,6 +379,7 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
             interactionElement
         ];
     }
+    //Show All Guides in localStorage
     deployStorage(items, color2) {
         if (items) {
             let el_STRING = [];
@@ -313,7 +389,17 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
                 };
                 item.direction === "X" ? item.offsetBy = "top" : item.offsetBy = "left";
                 item.direction === "X" ? stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_X(item.position, color2, item.height) : stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_Y(item.position, color2, item.height);
-                el_STRING.push("<span\n            class=\"".concat((/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides, "\"\n            style=\"").concat(stylesSpan_Axis, "\"\n            data-type=\"guides\"\n            data-direction=\"").concat(item.direction, "\"\n            data-offsetBy=\"").concat(item.offsetBy, "\"\n            data-count=\"").concat(nbGuides++, "\"\n            data-position=\"").concat(item.position, "\"\n            data-height=\"").concat(item.height, "\"\n          >\n          </span>"));
+                el_STRING.push(`<span
+            class="${(/*@__PURE__*/$parcel$interopDefault($e0e8cc12b16392dc$exports)).guides}"
+            style="${stylesSpan_Axis}"
+            data-type="guides"
+            data-direction="${item.direction}"
+            data-offsetBy="${item.offsetBy}"
+            data-count="${nbGuides++}"
+            data-position="${item.position}"
+            data-height="${item.height}"
+          >
+          </span>`);
             });
             return el_STRING;
         }
@@ -358,7 +444,8 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             this.addGuidesEvent(elHtml);
             this.currentItem = elHtml;
             document.querySelectorAll('[data-type="guides"]').length === 1 && this.addUI();
-            this.inputEl.value = this.currentItem.dataset.position; //storage
+            this.inputEl.value = this.currentItem.dataset.position;
+            //storage
             this.manageStorage.manage("guides");
             this.defineTerminal(this.currentItem);
         }
@@ -371,7 +458,8 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             item1.style.cursor = "pointer";
             this.controlUser.grab = true;
             this.controlUser.hover = true;
-        }); // Mouse Down
+        });
+        // Mouse Down
         item1.addEventListener("mousedown", (e)=>{
             e.preventDefault();
             this.currentItem = item1;
@@ -383,11 +471,13 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 this.currentItem = item1;
                 this.defineTerminal(item1);
             }
-        }); //Mouse Out
+        });
+        //Mouse Out
         item1.addEventListener("mouseout", (e)=>{
             this.controlUser.hover = null;
             if (this.controlUser.grab && this.controlUser.move) this.controlUser.move = true;
-        }); //Mouse up , cancel mouvement of guides
+        });
+        //Mouse up , cancel mouvement of guides
         item1.addEventListener("mouseup", $9b26f7b4737a23ee$export$61fc7d43ac8f84b0((e)=>{
             this.controlUser.grab = null;
             this.controlUser.move = null;
@@ -440,6 +530,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             this.changeGuidesPositionByKeys(e);
         });
     }
+    //Event for User Interface
     //Changes guides position by mouse move
     changeGuidesPosition(e6) {
         let initialValue = parseInt(e6.target.value);
@@ -448,6 +539,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         this.inputEl.value = initialValue + "px";
         direction === "X" ? this.currentItem.style.top = initialValue + "px" : this.currentItem.style.left = initialValue + "px";
     }
+    //Changes guides position with keyboard arrow
     changeGuidesPositionByKeys(e3) {
         let intValue = parseInt(e3.target.value);
         const direction = this.currentItem.dataset.direction;
@@ -486,23 +578,31 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             const lastIndex = allGuides.length - 1;
             this.currentItem = allGuides[lastIndex];
             this.defineTerminal(this.currentItem);
-        } //If the last guides as delete
+        }
+        //If the last guides as delete
         if (!document.querySelectorAll('[data-type="guides"]').length) {
             //Remove storage
             const UI = document.querySelector('[data-type="UI"]');
             UI.remove();
             localStorage.removeItem("guides");
-        } //Check if user exprience is good
+        }
+    //Check if user exprience is good
     //this.contextMenu.remove();
     }
     changeThickness(e4) {
         const direction = this.currentItem.dataset.offsetby;
         const newVal = e4.target.value;
         const newThickness = 4 + parseInt(e4.target.value);
-        const newGradient = "linear-gradient(\n    to ".concat(direction, ",\n    transparent 3px, \n    ").concat(this.currentColor, " 3px,\n    ").concat(this.currentColor, " ").concat(parseInt(newVal) + 3, "px,\n    transparent ").concat(parseInt(newVal) + 3, "px ,\n    transparent ").concat(parseInt(newVal) + 5, "px)");
+        const newGradient = `linear-gradient(
+    to ${direction},
+    transparent 3px, 
+    ${this.currentColor} 3px,
+    ${this.currentColor} ${parseInt(newVal) + 3}px,
+    transparent ${parseInt(newVal) + 3}px ,
+    transparent ${parseInt(newVal) + 5}px)`;
         this.currentItem.dataset.height = newVal;
         this.currentItem.style.background = newGradient;
-        direction === "top" ? this.currentItem.style.height = "".concat(parseInt(newThickness), "px") : this.currentItem.style.width = "".concat(newThickness, "px");
+        direction === "top" ? this.currentItem.style.height = `${parseInt(newThickness)}px` : this.currentItem.style.width = `${newThickness}px`;
         this.manageStorage.manage("guides");
     }
     changeColor_guides(e5) {
@@ -521,13 +621,17 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 if (item.dataset.el === "before") borderType = "top";
                 else if (item.dataset.el === "after") borderType = "bottom";
             }
-            const constructRules = "border-".concat(borderType);
-            item.style[constructRules] = "8px solid ".concat(this.currentColor);
+            const constructRules = `border-${borderType}`;
+            item.style[constructRules] = `8px solid ${this.currentColor}`;
         });
     }
     /****************************************/ /****************************************/ /****      UTILS METHOD             *****/ /****************************************/ /****************************************/ makeGradient(direction1, color, thickness) {
-        const gradient = "transparent 3px, \n  ".concat(color, " 3px,\n  ").concat(color, " ").concat(parseInt(thickness) + 3, "px,\n  transparent ").concat(parseInt(thickness) + 3, "px ,\n  transparent ").concat(parseInt(thickness) + 5, "px");
-        return "linear-gradient(to ".concat(direction1, ", ").concat(gradient, ")");
+        const gradient = `transparent 3px, 
+  ${color} 3px,
+  ${color} ${parseInt(thickness) + 3}px,
+  transparent ${parseInt(thickness) + 3}px ,
+  transparent ${parseInt(thickness) + 5}px`;
+        return `linear-gradient(to ${direction1}, ${gradient})`;
     }
     switch_UI(action) {
         if (action === "hidden") {
@@ -553,7 +657,8 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         this.showContextMenu = false;
         this.UI_body = document.getElementById("UI_body");
         this.create = new $4e3a677398d46132$export$69e780ca9f7a6d74();
-        this.manageStorage = new $33287d735753817d$export$191e63b17214d70d(); //Catch event press key
+        this.manageStorage = new $33287d735753817d$export$191e63b17214d70d();
+        //Catch event press key
         document.addEventListener("keydown", (e)=>{
             e.ctrlKey && (this.ctrlKey = true);
             e.shiftKey && (this.shiftKey = true);
@@ -603,7 +708,8 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 this.contextMenu = this.getContextMenu[0];
                 this.interactiveElement = this.getContextMenu[1];
                 this.UI_body.insertAdjacentElement("afterBegin", this.contextMenu);
-                this.interactiveElement.change_thickness.value = this.currentItem.dataset.height; //add event for interactive of contextMenu
+                this.interactiveElement.change_thickness.value = this.currentItem.dataset.height;
+                //add event for interactive of contextMenu
                 this.interactiveElement.deleteBtn.addEventListener("click", (e)=>{
                     this.deleteGuides();
                 });
@@ -617,7 +723,8 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                     this.contextMenu.remove();
                 });
             }
-        }); //localStorage.clear()
+        });
+        //localStorage.clear()
         this.injectGuidesInStorage();
     }
 }
