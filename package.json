@@ -1,11 +1,8 @@
 {
-  "name": "guides_js",
-  "version": "0.0.9",
+  "name": "guides.js_by_raficraft",
+  "version": "0.1.0",
   "description": "Integration Tools for developer front. Photoshop features for yout browser.",
-  "main": "./lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
