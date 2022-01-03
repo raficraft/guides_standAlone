@@ -1,13 +1,14 @@
 import "./index.css";
 
-function $parcel$interopDefault(a) {
-  return a && a.__esModule ? a.default : a;
-}
+
+
 var $15b8801333d4c6bd$export$c8e8069ed9c86e3d;
 var $15b8801333d4c6bd$export$34e0f9847d4c02dd;
+var $15b8801333d4c6bd$export$5e412469363e377d;
 var $15b8801333d4c6bd$export$89da14300d534261;
 $15b8801333d4c6bd$export$c8e8069ed9c86e3d = "_UI_body_640a62";
 $15b8801333d4c6bd$export$34e0f9847d4c02dd = "_container_640a62";
+$15b8801333d4c6bd$export$5e412469363e377d = "_menu_content_640a62";
 $15b8801333d4c6bd$export$89da14300d534261 = "_active_640a62";
 
 
@@ -80,90 +81,28 @@ const $9b26f7b4737a23ee$export$871b5a9be678db21 = (args)=>{
 };
 
 
-class $60470c96b7efe180$export$6dbaf1fff660fe95 {
-    dragStart(e) {
-        this.dragPosition.start.x = e.screenX;
-        this.dragPosition.start.y = e.screenY;
-    }
-    dragEnd(e1, el) {
-        this.dragPosition.end.x = e1.screenX;
-        this.dragPosition.end.y = e1.screenY;
-        const origin = {
-            x: parseInt(getComputedStyle(el, null).getPropertyValue("left").split("px")[0]),
-            y: parseInt(getComputedStyle(el, null).getPropertyValue("top").split("px")[0])
-        };
-        const moveTo = {
-            x: this.dragPosition.end.x - this.dragPosition.start.x,
-            y: this.dragPosition.end.y - this.dragPosition.start.y
-        };
-        el.style.left = origin.x + moveTo.x + "px";
-        el.style.top = origin.y + moveTo.y + "px";
-        el.style.opacity = 1;
-    }
-    constructor(){
-        this.dragPosition = {
-            start: {
-                x: 0,
-                y: 0
-            },
-            end: {
-                x: 0,
-                y: 0
-            }
-        };
-    }
-}
-
-
-var $9275fa834f8536a8$exports = {};
-
-
+const $6d4806093792670e$var$icon = `<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<g>
+<path d="M500,240.6c-76.1,0-138.4,62.3-138.4,138.4S423.9,517.4,500,517.4S638.4,455.1,638.4,379
+ C638.4,302.8,576.1,240.6,500,240.6z M500,471.2c-50.7,0-92.2-41.5-92.2-92.2s41.5-92.2,92.2-92.2s92.2,41.5,92.2,92.2
+ S550.7,471.2,500,471.2z M868.9,378.9C868.9,176,702.9,10,500,10S131.1,176,131.1,378.9c0,87.6,30,168.3,80.7,230.6l0,0l249,359.7
+ C470,983,483.9,990,497.7,990s27.7-6.9,36.9-20.8l253.6-359.7l0,0C839,547.3,868.9,466.6,868.9,378.9z M746.7,586.5L500,943.9
+ L253.3,586.5c-2.3-2.3-2.3-4.6-4.6-6.9C202.6,522,177.2,452.8,177.2,379c0-177.6,145.3-322.8,322.8-322.8
+ c177.6,0,322.8,145.3,322.8,322.8c0,73.8-25.4,143-71.5,200.6C749,581.9,749,584.2,746.7,586.5z"/>
+</g>
+</svg>`;
 class $6d4806093792670e$export$4b08aed5f1ec6952 {
     UI_body() {
         // Add Terminal view, for inject all HTML element for the project.
-        this.UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section id="${$15b8801333d4c6bd$export$c8e8069ed9c86e3d}" class="UI_body"></section>`);
+        this.UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section id="UI_body" class="${$15b8801333d4c6bd$export$c8e8069ed9c86e3d}"></section>`);
         document.body.insertAdjacentElement("beforeBegin", this.UI);
-    }
-    UI_menu() {
-        const menu_STRING = `<nav class="${$15b8801333d4c6bd$export$34e0f9847d4c02dd}" draggable="true"><header></header><ul class="menu_content"><li id="guides_icon" class="${S.active}"><img src="${(/*@__PURE__*/$parcel$interopDefault($9275fa834f8536a8$exports))}"/></li><li>2</li><li>3</li><li>4</li></ul></nav>`;
-        const menu = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(menu_STRING); //Add drag event
-        menu.addEventListener("dragstart", (e)=>{
-            this.dragEvent.dragStart(e);
-        });
-        menu.addEventListener("dragend", (e)=>{
-            this.dragEvent.dragEnd(e, menu);
-        }); //Inject menu
-        this.UI.insertAdjacentElement("afterbegin", menu);
     }
     constructor(){
         console.log("init_UI");
         this.UI_body();
-        this.UI_menu();
-        this.dragEvent = new $60470c96b7efe180$export$6dbaf1fff660fe95();
     }
 }
-
-
-
-
-var $e0e8cc12b16392dc$export$c8e8069ed9c86e3d;
-var $e0e8cc12b16392dc$export$6bd0430c083ef3cf;
-var $e0e8cc12b16392dc$export$80cd3f47130f5b35;
-var $e0e8cc12b16392dc$export$306af2bd63798f3d;
-var $e0e8cc12b16392dc$export$218b899e1d476006;
-var $e0e8cc12b16392dc$export$b82da7a6a828be37;
-var $e0e8cc12b16392dc$export$bb646b20bb93d339;
-var $e0e8cc12b16392dc$export$545187d680fb3bce;
-var $e0e8cc12b16392dc$export$611455ef14a12093;
-$e0e8cc12b16392dc$export$c8e8069ed9c86e3d = "_UI_body_2ee2f9";
-$e0e8cc12b16392dc$export$6bd0430c083ef3cf = "_guides_2ee2f9";
-$e0e8cc12b16392dc$export$80cd3f47130f5b35 = "_guides_pseudoEL_2ee2f9";
-$e0e8cc12b16392dc$export$306af2bd63798f3d = "_UI_guides__container_2ee2f9";
-$e0e8cc12b16392dc$export$218b899e1d476006 = "_contextMenu_2ee2f9";
-$e0e8cc12b16392dc$export$b82da7a6a828be37 = "_close_contextMenu_2ee2f9";
-$e0e8cc12b16392dc$export$bb646b20bb93d339 = "_cross_2ee2f9";
-$e0e8cc12b16392dc$export$545187d680fb3bce = "_contextMenu_content_2ee2f9";
-$e0e8cc12b16392dc$export$611455ef14a12093 = "_contextMenu_blocInput_2ee2f9";
 
 
 
@@ -243,6 +182,60 @@ const $0b1328cf225e4578$export$bcbbd831497ce88 = {
 };
 
 
+var $e0e8cc12b16392dc$export$6bd0430c083ef3cf;
+var $e0e8cc12b16392dc$export$80cd3f47130f5b35;
+var $e0e8cc12b16392dc$export$306af2bd63798f3d;
+var $e0e8cc12b16392dc$export$218b899e1d476006;
+var $e0e8cc12b16392dc$export$b82da7a6a828be37;
+var $e0e8cc12b16392dc$export$bb646b20bb93d339;
+var $e0e8cc12b16392dc$export$545187d680fb3bce;
+var $e0e8cc12b16392dc$export$611455ef14a12093;
+$e0e8cc12b16392dc$export$6bd0430c083ef3cf = "_guides_2ee2f9";
+$e0e8cc12b16392dc$export$80cd3f47130f5b35 = "_guides_pseudoEL_2ee2f9";
+$e0e8cc12b16392dc$export$306af2bd63798f3d = "_UI_guides__container_2ee2f9";
+$e0e8cc12b16392dc$export$218b899e1d476006 = "_contextMenu_2ee2f9";
+$e0e8cc12b16392dc$export$b82da7a6a828be37 = "_close_contextMenu_2ee2f9";
+$e0e8cc12b16392dc$export$bb646b20bb93d339 = "_cross_2ee2f9";
+$e0e8cc12b16392dc$export$545187d680fb3bce = "_contextMenu_content_2ee2f9";
+$e0e8cc12b16392dc$export$611455ef14a12093 = "_contextMenu_blocInput_2ee2f9";
+
+
+
+class $60470c96b7efe180$export$6dbaf1fff660fe95 {
+    dragStart(e) {
+        this.dragPosition.start.x = e.screenX;
+        this.dragPosition.start.y = e.screenY;
+    }
+    dragEnd(e1, el) {
+        this.dragPosition.end.x = e1.screenX;
+        this.dragPosition.end.y = e1.screenY;
+        const origin = {
+            x: parseInt(getComputedStyle(el, null).getPropertyValue("left").split("px")[0]),
+            y: parseInt(getComputedStyle(el, null).getPropertyValue("top").split("px")[0])
+        };
+        const moveTo = {
+            x: this.dragPosition.end.x - this.dragPosition.start.x,
+            y: this.dragPosition.end.y - this.dragPosition.start.y
+        };
+        el.style.left = origin.x + moveTo.x + "px";
+        el.style.top = origin.y + moveTo.y + "px";
+        el.style.opacity = 1;
+    }
+    constructor(){
+        this.dragPosition = {
+            start: {
+                x: 0,
+                y: 0
+            },
+            end: {
+                x: 0,
+                y: 0
+            }
+        };
+    }
+}
+
+
 class $4e3a677398d46132$export$69e780ca9f7a6d74 {
     get_guides(e2, direction, color, thickness) {
         let nbGuides = 0;
@@ -298,21 +291,10 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
         };
         return pseudoEl;
     }
-    get_UI() {
-        const UI = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<div class="${$e0e8cc12b16392dc$export$306af2bd63798f3d}" data-type="UI">
-      <label>X || Y</label>
-      <input id="log_guides" value="0" />
-    </div>`);
-        const inputChange = UI.querySelector("input");
-        return [
-            UI,
-            inputChange
-        ];
-    }
     get_contextMenu(e1) {
         $9b26f7b4737a23ee$export$84a19d80a0fc97e6('[data-type="contextmenu"]');
         const X = e1.pageX > window.innerWidth - 100 ? `${e1.pageX - 150}px` : `${e1.pageX}px`;
-        const Y = e1.pageY > window.innerHeight - 80 ? `${e1.pageY - 80}px` : `${e1.pageY}px`;
+        const Y = e1.pageY > window.innerHeight - 200 ? `${e1.pageY - 200}px` : `${e1.pageY}px`;
         const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section class="${$e0e8cc12b16392dc$export$218b899e1d476006}"
         style="${$0b1328cf225e4578$export$bcbbd831497ce88.contextMenu(X, Y)}"  
         data-type="contextmenu"
@@ -327,31 +309,113 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
           </div>
         </header>
         <div class="${$e0e8cc12b16392dc$export$545187d680fb3bce}">
-          <div class="contextMenu_blocInput">
-            <input type="button" id="del_guides" value="delete" data-action="delete_guides"/>
+          <div class="${$e0e8cc12b16392dc$export$611455ef14a12093}">
+            <input type="number" id="position_guides" name="position_guides" value="0" data-action="position_guides" min="0" max="4000"/>
+            <label for="position_guides">
+              X
+            </label> 
+          </div>
+          <hr>
+          <div class="${$e0e8cc12b16392dc$export$611455ef14a12093}">
+            <input type="button" id="del_guides" name="del_guides" value="delete" data-action="delete_guides"/>
             <label for="del_guides">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-                <g><path d="M723.9,976H276c-61.8,0-112-50.1-112-111.8V276c0-15.5,12.6-28,28-28s28,12.5,28,28v588.2c0,30.7,25.1,55.8,56,55.8h447.9c30.9,0,56.1-25,56.1-55.8V276c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v588.2C836,925.9,785.7,976,723.9,976z"/><path d="M640,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.5,0,28,12.5,28,28v392C668,795.5,655.4,808,640,808z M500,808c-15.4,0-28-12.5-28-28V388c0-15.5,12.6-28,28-28c15.4,0,28,12.5,28,28v392C528,795.5,515.4,808,500,808z M360,808c-15.5,0-28-12.5-28-28V388c0-15.5,12.5-28,28-28s28,12.5,28,28v392C388,795.5,375.4,808,360,808z M962,220H38c-15.4,0-28-12.5-28-28c0-15.5,12.5-28,28-28h266v-55.9c0-46.4,37.8-84.1,84.2-84.1h223.5c46.5,0,84.2,37.7,84.2,84.1V164h266c15.4,0,28,12.5,28,28C990,207.5,977.4,220,962,220z M360,164h280v-55.9c0-15.5-12.7-28.1-28.2-28.1H388.2c-15.6,0-28.2,12.6-28.2,28.1V164z"/></g>
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="1000.000000pt" height="1040.000000pt" viewBox="0 0 1000.000000 1040.000000"
+              preserveAspectRatio="xMidYMid meet">
+            
+              <g transform="translate(0.000000,1040.000000) scale(0.100000,-0.100000)"
+              fill="#000000" stroke="none">
+              <path d="M4465 10090 c-191 -21 -451 -190 -635 -415 -200 -244 -335 -543 -412
+              -907 l-33 -158 -90 0 c-653 -2 -2357 -22 -2454 -30 -184 -14 -223 -28 -297
+              -106 -124 -130 -173 -278 -140 -425 30 -135 121 -256 244 -322 70 -38 152 -45
+              614 -55 207 -4 380 -11 384 -15 4 -4 40 -469 80 -1034 196 -2759 353 -4796
+              404 -5243 24 -209 46 -297 105 -407 137 -260 378 -446 721 -559 297 -98 359
+              -102 1639 -110 948 -7 1929 6 2095 26 413 51 792 246 992 510 60 79 132 223
+              153 305 50 196 139 1318 434 5418 43 598 81 1090 85 1094 4 4 175 11 379 15
+              447 9 540 17 614 54 173 84 283 287 254 470 -13 87 -65 191 -132 267 -60 68
+              -100 90 -189 106 -82 15 -730 30 -1316 31 -248 0 -654 3 -902 7 -392 5 -452 8
+              -452 21 0 36 -75 346 -107 442 -94 281 -258 547 -455 736 -105 101 -176 149
+              -338 230 l-129 64 -523 -1 c-288 -1 -554 -5 -593 -9z m989 -926 c92 -23 201
+              -245 220 -451 l7 -73 -675 0 -676 0 0 69 c0 80 36 215 81 306 53 106 101 146
+              189 157 72 8 816 2 854 -8z m1956 -1557 c0 -210 -368 -5161 -450 -6057 -15
+              -155 -31 -210 -75 -248 -19 -17 -51 -36 -72 -42 -66 -20 -585 -29 -1678 -29
+              -1133 0 -1885 11 -1948 29 -51 15 -101 61 -115 107 -21 71 -32 177 -87 843
+              -102 1243 -371 4900 -391 5318 l-7 142 2411 0 2412 0 0 -63z"/>
+              <path d="M4869 7322 c-73 -37 -86 -68 -99 -218 -13 -153 -13 -1114 0 -3034 11
+              -1596 22 -2285 40 -2430 16 -119 29 -143 98 -171 105 -43 209 -22 280 55 39
+              43 40 45 47 142 16 211 -15 5113 -34 5422 -8 131 -11 146 -35 176 -64 84 -197
+              110 -297 58z"/>
+              <path d="M3622 7319 c-55 -10 -105 -41 -140 -87 l-27 -36 2 -584 c0 -322 6
+              -826 12 -1121 6 -295 20 -979 31 -1521 37 -1865 50 -2285 71 -2362 31 -118
+              190 -181 305 -121 49 26 101 83 110 120 9 33 -2 1457 -16 2143 -40 2001 -69
+              3138 -86 3368 -8 100 -27 133 -99 172 -58 32 -103 40 -163 29z"/>
+              <path d="M6278 7299 c-46 -11 -114 -52 -127 -78 -47 -87 -54 -264 -101 -2626
+              -16 -820 -35 -1722 -41 -2005 -6 -283 -9 -621 -7 -750 3 -222 4 -238 26 -280
+              58 -115 203 -148 327 -75 49 28 71 58 79 106 13 76 40 1068 71 2574 8 402 20
+              973 26 1270 7 297 12 808 13 1136 l1 596 -28 40 c-49 71 -156 112 -239 92z"/>
+              </g>
               </svg>
             </label> 
           </div>
           <hr>
           <div class="${$e0e8cc12b16392dc$export$611455ef14a12093}">
-            <input type="number" min="1" max="500" max="500" value="1" data-action="change_thickness">
-            <label style="${$0b1328cf225e4578$export$bcbbd831497ce88.trash_icon}" for="del_guides">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.96 75.21"><defs><style>.cls-1{fill:#231f20;}.cls-2{fill:#088c44;}</style></defs><title>icon_thickness</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M66.54,26.3,2.49,26c-3.22,0-3.22,5,0,5l64.05.26c3.22,0,3.22-5,0-5Z"/><path class="cls-1" d="M66.47,44.9,2.41,44.64c-3.21,0-3.22,5,0,5l64.06.26c3.22,0,3.22-5,0-5Z"/><path class="cls-1" d="M32.78,2.41l-.07,17.1c0,3.22,5,3.22,5,0l.07-17.1c0-3.21-5-3.22-5,0Z"/><path class="cls-2" d="M39.77,16.34l-4.56,3.17"/><path class="cls-1" d="M38.51,14.18,34,17.35a2.56,2.56,0,0,0-.9,3.42,2.53,2.53,0,0,0,3.42.9L41,18.5a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9Z"/><path class="cls-1" d="M37,17.74l-4.27-3.55a2.57,2.57,0,0,0-3.53,0,2.52,2.52,0,0,0,0,3.54l4.26,3.55a2.58,2.58,0,0,0,3.54,0,2.53,2.53,0,0,0,0-3.54Z"/><path class="cls-1" d="M37.42,72.8l.33-17.09c.06-3.22-4.94-3.22-5,0L32.42,72.8c-.06,3.22,4.94,3.22,5,0Z"/><path class="cls-2" d="M30.64,58.8l4.61-3.09"/><path class="cls-1" d="M31.91,61l4.6-3.09a2.56,2.56,0,0,0,.9-3.42,2.52,2.52,0,0,0-3.42-.9l-4.61,3.1a2.55,2.55,0,0,0-.89,3.42,2.52,2.52,0,0,0,3.42.89Z"/><path class="cls-1" d="M33.48,57.48l4.22,3.61a2.56,2.56,0,0,0,3.53,0,2.53,2.53,0,0,0,0-3.54L37,53.94a2.56,2.56,0,0,0-3.54,0,2.53,2.53,0,0,0,0,3.54Z"/></g></g></svg>
-           </label> 
+            <input type="number" min="1" max="500" id="thickness_guides" name="thickness_guides" value="1" data-action="change_thickness">
+            <label for="thickness_guides">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="225.000000pt" height="225.000000pt" viewBox="0 0 225.000000 225.000000"
+              preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+              fill="#000000" stroke="none">
+              <path d="M1088 2111 c-22 -11 -35 -26 -40 -48 -5 -18 -7 -449 -6 -957 3 -911
+              3 -926 23 -945 11 -11 34 -23 52 -27 27 -5 37 -1 63 24 l30 30 0 940 c0 921 0
+              940 -20 964 -25 33 -62 39 -102 19z"/>
+              <path d="M475 1440 l-59 -60 87 -81 c48 -44 87 -85 87 -90 0 -5 -76 -9 -176
+              -9 l-176 0 -29 -29 c-31 -31 -36 -59 -17 -94 23 -44 35 -46 221 -47 97 0 177
+              -3 177 -7 0 -4 -38 -46 -85 -93 l-85 -86 58 -57 57 -57 193 193 192 192 -193
+              193 -192 192 -60 -60z"/>
+              <path d="M1502 1307 l-192 -192 193 -193 192 -192 58 58 57 58 -85 84 c-47 47
+              -85 88 -85 92 0 5 78 8 174 8 170 0 176 1 202 24 39 33 39 89 0 122 -26 23
+              -32 24 -202 24 -96 0 -174 3 -174 7 0 4 38 46 85 93 l85 86 -58 57 -57 57
+              -193 -193z"/>
+              </g>
+              </svg>   
+            </label> 
           </div>
           <hr>
           <div class="${$e0e8cc12b16392dc$export$611455ef14a12093}">
             <input      
-              type="color" data-action="changeColor_guides" value="#ff0000"
-            />          
+              type="color" id="change_color" name="change_color" data-action="changeColor_guides" value="#ff0000"
+            />      
+            <label for="change_color">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="239.000000pt" height="211.000000pt" viewBox="0 0 239.000000 211.000000"
+              preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,211.000000) scale(0.100000,-0.100000)"
+              fill="#000000" stroke="none">
+              <path d="M805 2100 c-336 -24 -581 -144 -671 -326 -26 -53 -29 -69 -29 -154 0
+              -83 3 -102 27 -150 15 -31 44 -75 64 -98 l36 -43 -81 -83 c-119 -123 -163
+              -236 -141 -369 20 -127 35 -146 377 -489 342 -343 364 -360 488 -380 44 -8 81
+              -7 126 1 128 22 146 36 509 397 228 227 342 334 357 334 11 0 50 -9 86 -20
+              155 -48 256 -214 257 -425 1 -157 31 -280 67 -273 49 10 87 141 104 361 23
+              313 -17 498 -152 699 -55 82 -195 225 -289 296 -98 75 -268 171 -365 208 -76
+              29 -80 32 -322 269 -134 132 -252 243 -261 247 -20 8 -53 7 -187 -2z m-168
+              -368 l-179 -179 79 -26 c134 -44 111 -54 303 138 l170 170 415 -415 415 -415
+              -387 -387 c-426 -426 -439 -436 -535 -425 -26 3 -58 12 -72 19 -36 19 -591
+              563 -617 604 -32 52 -40 101 -28 163 10 50 19 63 104 150 l92 95 79 -27 c142
+              -46 391 -87 536 -87 39 0 57 -6 80 -25 65 -55 153 -57 212 -5 44 39 60 79 53
+              136 -13 119 -146 177 -249 109 -41 -27 -44 -28 -152 -21 -336 19 -586 110
+              -652 237 -18 36 -18 122 0 158 53 102 278 201 476 210 34 1 30 -3 -143 -177z"/>
+              </g>
+              </svg>
+            </label>    
           </div>
         </div>
       </section>`);
         const interactionElement = {
             close_contextMenu: el_STRING.querySelector('[data-action="close_context_menu"]'),
+            change_position: el_STRING.querySelector('[data-action="position_guides"]'),
             change_thickness: el_STRING.querySelector('[data-action="change_thickness"]'),
             deleteBtn: el_STRING.querySelector('[data-action="delete_guides"]'),
             changeColor: el_STRING.querySelector('[data-action="changeColor_guides"]')
@@ -429,9 +493,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             const elHtml = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(this.create.get_guides(e1, direction, this.currentColor, 1));
             this.UI_body.insertAdjacentElement("afterBegin", elHtml);
             this.addGuidesEvent(elHtml);
-            this.currentItem = elHtml;
-            document.querySelectorAll('[data-type="guides"]').length === 1 && this.addUI();
-            this.inputEl.value = this.currentItem.dataset.position; //storage
+            this.currentItem = elHtml; //storage
             this.manageStorage.manage("guides");
             this.defineTerminal(this.currentItem);
         }
@@ -448,9 +510,11 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         item1.addEventListener("mousedown", (e)=>{
             e.preventDefault();
             this.currentItem = item1;
-            this.inputEl.value = item1.dataset.position;
-            this.inputEl.focus();
-            if (this.showContextMenu) this.interactiveElement.change_thickness.value = item1.dataset.height;
+            if (this.showContextMenu) {
+                this.interactiveElement.change_thickness.value = item1.dataset.height;
+                this.interactiveElement.change_position.value = item1.dataset.position;
+                this.UI_body.querySelector('label[for="position_guides"]').textContent = item1.dataset.direction === "X" ? "Y" : "X";
+            }
             if (this.controlUser.grab) {
                 this.controlUser.move = true;
                 this.currentItem = item1;
@@ -466,13 +530,6 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             this.controlUser.move = null;
             this.manageStorage.manage("guides");
         }), 300);
-    }
-    changeGuidesPosition(e2) {
-        let intValue = parseInt(e2.target.value);
-        const direction = this.currentItem.dataset.direction;
-        this.currentItem.dataset.position = intValue;
-        this.inputEl.value = intValue + "px";
-        direction === "X" ? this.currentItem.style.top = intValue + "px" : this.currentItem.style.left = intValue + "px";
     }
     injectGuidesInStorage() {
         if (localStorage.getItem("guides")) {
@@ -491,49 +548,36 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             });
             const currentIndex = guidesCollection.length - 1;
             this.currentItem = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(guidesCollection[currentIndex]);
-            this.addUI();
             const allGuides = document.querySelectorAll('[data-type="guides"]');
             const lastIndex = allGuides.length - 1;
             this.defineTerminal(allGuides[lastIndex]);
         }
     }
-    /****************************************/ /****************************************/ /****       GUIDES UI Method         ****/ /****************************************/ /****************************************/ addUI() {
-        const getUI = this.create.get_UI();
-        this.UI_body.insertAdjacentElement("afterBegin", getUI[0]);
-        this.initUI_event(getUI[1]);
-        if (this.currentItem !== "") this.inputEl.value = this.currentItem.dataset.position;
-    }
-    initUI_event(item3) {
-        //Cursor position, display in UI
-        this.inputEl = item3;
-        this.inputEl.addEventListener("change", (e)=>{
-            this.changeGuidesPosition(e);
-        });
-        this.inputEl.addEventListener("keydown", (e)=>{
-            this.changeGuidesPositionByKeys(e);
-        });
-    }
-    //Changes guides position by mouse move
-    changeGuidesPosition(e6) {
-        let initialValue = parseInt(e6.target.value);
+    /****************************************/ /****************************************/ /****       GUIDES UI Method         ****/ /****************************************/ /****************************************/ //Changes guides position by mouse move
+    changeGuidesPosition(e5) {
+        let initialValue = parseInt(e5.target.value);
         const direction = this.currentItem.dataset.direction;
+        console.log(initialValue);
         this.currentItem.dataset.position = initialValue;
-        this.inputEl.value = initialValue + "px";
+        this.inputEl.value = initialValue;
         direction === "X" ? this.currentItem.style.top = initialValue + "px" : this.currentItem.style.left = initialValue + "px";
+        this.manageStorage.manage("guides");
     }
-    changeGuidesPositionByKeys(e3) {
-        let intValue = parseInt(e3.target.value);
+    changeGuidesPositionByKeys(e2) {
+        let intValue = parseInt(e2.target.value);
         const direction = this.currentItem.dataset.direction;
-        if (e3.key === "ArrowUp") {
+        console.log(intValue);
+        if (e2.key === "ArrowUp") {
             intValue++;
             this.inputEl.value = intValue;
         }
-        if (e3.key === "ArrowDown") {
+        if (e2.key === "ArrowDown") {
             intValue--;
             this.inputEl.value = intValue;
         }
         this.currentItem.dataset.position = intValue;
         direction === "X" ? this.currentItem.style.top = intValue + "px" : this.currentItem.style.left = intValue + "px";
+        this.manageStorage.manage("guides");
     }
     /****************************************/ /****************************************/ /****       TERMINAL METHOD         *****/ /****************************************/ /****************************************/ /**
    * @param {HTML_element} item
@@ -572,10 +616,10 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         } //Check if user exprience is good
     //this.contextMenu.remove();
     }
-    changeThickness(e4) {
+    changeThickness(e3) {
         const direction = this.currentItem.dataset.offsetby;
-        const newVal = e4.target.value;
-        const newThickness = 4 + parseInt(e4.target.value);
+        const newVal = e3.target.value;
+        const newThickness = 4 + parseInt(e3.target.value);
         const newGradient = `linear-gradient(
     to ${direction},
     transparent 3px, 
@@ -588,9 +632,9 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         direction === "top" ? this.currentItem.style.height = `${parseInt(newThickness)}px` : this.currentItem.style.width = `${newThickness}px`;
         this.manageStorage.manage("guides");
     }
-    changeColor_guides(e5) {
+    changeColor_guides(e4) {
         const guidesCollection = document.querySelectorAll('[data-type="guides"]');
-        this.currentColor = e5.target.value;
+        this.currentColor = e4.target.value;
         guidesCollection.forEach((item)=>{
             item.style.background = this.makeGradient(item.dataset.offsetby, this.currentColor, item.dataset.height);
         });
@@ -658,7 +702,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
      * Trigger addGuides if shift or ctrl as pressed
      * Define the current direction X OR Y
      */ document.addEventListener("mousedown", (e)=>{
-            console.log('down'); //this.showGuides = true;
+            console.log("down"); //this.showGuides = true;
             this.ctrlKey && this.add_guides(e, "X");
             this.shiftKey && this.add_guides(e, "Y");
             if (document.querySelectorAll('[data-type="guides"]').length && this.showGuides) this.switch_UI("show");
@@ -674,23 +718,31 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 if (this.currentItem.dataset.direction === "X") {
                     this.currentItem.style.top = e.pageY + "px";
                     this.currentItem.dataset.position = e.pageY;
-                    this.inputEl.value = e.pageY;
                 } else if (this.currentItem.dataset.direction === "Y") {
                     this.currentItem.style.left = e.pageX + "px";
                     this.currentItem.dataset.position = e.pageX;
-                    this.inputEl.value = e.pageX;
                 }
             }
         }), 300);
-        this.UI_body.addEventListener("contextmenu", (e7)=>{
+        this.UI_body.addEventListener("contextmenu", (e6)=>{
             if (this.controlUser.hover) {
-                e7.preventDefault();
-                this.getContextMenu = this.create.get_contextMenu(e7);
+                e6.preventDefault();
+                this.getContextMenu = this.create.get_contextMenu(e6);
                 this.showContextMenu = true;
                 this.contextMenu = this.getContextMenu[0];
                 this.interactiveElement = this.getContextMenu[1];
                 this.UI_body.insertAdjacentElement("afterBegin", this.contextMenu);
+                this.inputEl = this.interactiveElement.change_position;
                 this.interactiveElement.change_thickness.value = this.currentItem.dataset.height; //add event for interactive of contextMenu
+                this.inputEl.value = this.currentItem.dataset.position;
+                this.inputEl.focus();
+                this.UI_body.querySelector('label[for="position_guides"]').textContent = this.currentItem.dataset.direction === "X" ? "Y" : "X";
+                this.inputEl.addEventListener("keyup", (e)=>{
+                    this.changeGuidesPositionByKeys(e);
+                });
+                this.inputEl.addEventListener("change", (e)=>{
+                    this.changeGuidesPosition(e);
+                });
                 this.interactiveElement.deleteBtn.addEventListener("click", (e)=>{
                     this.deleteGuides();
                 });
@@ -710,14 +762,9 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
 }
 
 
-var $508b3e705df3eb40$export$c8e8069ed9c86e3d;
-$508b3e705df3eb40$export$c8e8069ed9c86e3d = "_UI_body_66627d";
-
-
 if (null) null.accept(function() {
     window.location.reload();
 });
-console.log("????");
 new $6d4806093792670e$export$4b08aed5f1ec6952();
 new $0821797f8ef150f0$export$79bc953678f776f7();
 

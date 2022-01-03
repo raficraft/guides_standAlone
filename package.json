@@ -1,6 +1,6 @@
 {
-  "name": "guides.js_by_raficraft",
-  "version": "0.1.0",
+  "name": "guides_js_by_raficraft",
+  "version": "0.2.5",
   "description": "Integration Tools for developer front. Photoshop features for yout browser.",
   "main": "index.js",
   "scripts": {
