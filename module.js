@@ -1,5 +1,7 @@
 import "./index.css";
 
+var $508b3e705df3eb40$export$c8e8069ed9c86e3d;
+$508b3e705df3eb40$export$c8e8069ed9c86e3d = "_UI_body_66627d";
 
 
 var $15b8801333d4c6bd$export$c8e8069ed9c86e3d;

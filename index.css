@@ -2,127 +2,124 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+._UI_body_66627d div,
+._UI_body_66627d span,
+._UI_body_66627d applet,
+._UI_body_66627d object,
+._UI_body_66627d iframe,
+._UI_body_66627d h1,
+._UI_body_66627d h2,
+._UI_body_66627d h3,
+._UI_body_66627d h4,
+._UI_body_66627d h5,
+._UI_body_66627d h6,
+._UI_body_66627d p,
+._UI_body_66627d blockquote,
+._UI_body_66627d pre,
+._UI_body_66627d a,
+._UI_body_66627d abbr,
+._UI_body_66627d acronym,
+._UI_body_66627d address,
+._UI_body_66627d big,
+._UI_body_66627d cite,
+._UI_body_66627d code,
+._UI_body_66627d del,
+._UI_body_66627d dfn,
+._UI_body_66627d em,
+._UI_body_66627d img,
+._UI_body_66627d ins,
+._UI_body_66627d kbd,
+._UI_body_66627d q,
+._UI_body_66627d s,
+._UI_body_66627d samp,
+._UI_body_66627d small,
+._UI_body_66627d strike,
+._UI_body_66627d strong,
+._UI_body_66627d sub,
+._UI_body_66627d sup,
+._UI_body_66627d tt,
+._UI_body_66627d var,
+._UI_body_66627d b,
+._UI_body_66627d u,
+._UI_body_66627d i,
+._UI_body_66627d center,
+._UI_body_66627d dl,
+._UI_body_66627d dt,
+._UI_body_66627d dd,
+._UI_body_66627d ol,
+._UI_body_66627d ul,
+._UI_body_66627d li,
+._UI_body_66627d fieldset,
+._UI_body_66627d form,
+._UI_body_66627d label,
+._UI_body_66627d legend,
+._UI_body_66627d table,
+._UI_body_66627d caption,
+._UI_body_66627d tbody,
+._UI_body_66627d tfoot,
+._UI_body_66627d thead,
+._UI_body_66627d tr,
+._UI_body_66627d th,
+._UI_body_66627d td,
+._UI_body_66627d article,
+._UI_body_66627d aside,
+._UI_body_66627d canvas,
+._UI_body_66627d details,
+._UI_body_66627d embed,
+._UI_body_66627d figure,
+._UI_body_66627d figcaption,
+._UI_body_66627d footer,
+._UI_body_66627d header,
+._UI_body_66627d hgroup,
+._UI_body_66627d menu,
+._UI_body_66627d nav,
+._UI_body_66627d output,
+._UI_body_66627d ruby,
+._UI_body_66627d section,
+._UI_body_66627d summary,
+._UI_body_66627d time,
+._UI_body_66627d mark,
+._UI_body_66627d audio,
+._UI_body_66627d video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+._UI_body_66627d article,
+._UI_body_66627d aside,
+._UI_body_66627d details,
+._UI_body_66627d figcaption,
+._UI_body_66627d figure,
+._UI_body_66627d footer,
+._UI_body_66627d header,
+._UI_body_66627d hgroup,
+._UI_body_66627d menu,
+._UI_body_66627d nav,
+._UI_body_66627d section {
   display: block;
 }
-body {
+._UI_body_66627d body {
   line-height: 1;
 }
-ol,
-ul {
+._UI_body_66627d ol,
+._UI_body_66627d ul {
   list-style: none;
 }
-blockquote,
-q {
+._UI_body_66627d blockquote,
+._UI_body_66627d q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+._UI_body_66627d blockquote:before,
+._UI_body_66627d blockquote:after,
+._UI_body_66627d q:before,
+._UI_body_66627d q:after {
   content: "";
   content: none;
 }
-table {
+._UI_body_66627d table {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -146,14 +143,14 @@ table {
   width: 2.75em;
   border-radius: 3px;
   border: 1px solid black;
-  pointer-events: all;
   background-color: white;
+  pointer-events: all;
 }
 ._UI_body_640a62 ._container_640a62 header {
-  content: "";
   width: 100%;
   height: 16px;
   background-color: #586280;
+  content: "";
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -166,18 +163,18 @@ table {
   margin: 0.5em 0 0.5em 0;
 }
 ._UI_body_640a62 ._container_640a62 ._menu_content_640a62 li {
-  width: 2em;
-  height: 2em;
-  background-color: white;
-  text-align: center;
-  margin: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 2em;
+  height: 2em;
+  margin: 0.25rem;
+  background-color: white;
   background-color: #cacaca;
+  border-radius: 3px;
+  text-align: center;
   color: white;
   font-weight: bold;
-  border-radius: 3px;
 }
 ._UI_body_640a62 ._container_640a62 ._menu_content_640a62 li img {
   width: 1.6rem;
@@ -185,9 +182,9 @@ table {
   color: red;
 }
 ._UI_body_640a62 ._container_640a62 ._menu_content_640a62 li._active_640a62 {
+  background: white;
   border: 2px solid red;
   color: black;
-  background: white;
 }
 /**Landscape phone and down*/
 /*Landscape phone to portrait tablet*/
@@ -207,93 +204,90 @@ table {
 }
 ._guides_pseudoEL_2ee2f9 {
   position: absolute;
-  content: "";
-  z-index: 10000;
-  display: inline-block;
+  z-index: 999990;
   height: 0;
   width: 0;
   display: block;
+  content: "";
   cursor: hand;
-  z-index: 999990;
 }
 ._UI_guides__container_2ee2f9 label {
+  margin: 0 1em 0 0;
   color: white;
   font-size: 0.75em;
-  margin: 0 1em 0 0;
   text-align: center;
 }
 ._UI_guides__container_2ee2f9 input {
-  border-radius: 0;
-  background: transparent;
   width: 30px;
   padding: 0 8px;
-  text-align: center;
+  border-radius: 0;
+  background: transparent;
   background-color: white;
   border: 1px solid black;
   border-radius: 3px;
+  text-align: center;
   pointer-events: all;
 }
 ._contextMenu_2ee2f9 {
   position: fixed;
+  z-index: 999998;
   border-radius: 3px;
   border: 1px solid black;
   background: white;
-  z-index: 999998;
-  pointer-events: all;
   cursor: -webkit-grab;
   cursor: grab;
+  pointer-events: all;
 }
 ._contextMenu_2ee2f9 header {
-  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #3b4563;
+  width: 100%;
   padding: 0.25em 0.5em 0.5em;
-  display: flex;
+  background: #3b4563;
   box-sizing: border-box;
   cursor: -webkit-grab;
   cursor: grab;
 }
 ._contextMenu_2ee2f9 header label {
-  color: white;
-  font-size: 1em;
   margin-left: 0.5em;
+  font-size: 1em;
+  color: white;
   cursor: -webkit-grab;
   cursor: grab;
 }
 ._contextMenu_2ee2f9 header ._close_contextMenu_2ee2f9 {
-  width: 17px;
-  height: 17px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: space-between;
-  cursor: pointer;
   margin-right: 0.25em;
+  width: 17px;
+  height: 17px;
   transition: 0.3s;
+  cursor: pointer;
 }
 ._contextMenu_2ee2f9 header ._close_contextMenu_2ee2f9:hover {
   background-color: red;
   transform: rotate(180deg);
 }
 ._contextMenu_2ee2f9 header ._close_contextMenu_2ee2f9 span:nth-child(1n) {
-  transform: rotate(45deg);
   top: 7px;
   left: 1px;
+  transform: rotate(45deg);
 }
 ._contextMenu_2ee2f9 header ._close_contextMenu_2ee2f9 span:nth-child(2n) {
-  transform: rotate(-45deg);
   top: 7px;
   right: 1px;
+  transform: rotate(-45deg);
 }
 ._contextMenu_2ee2f9 header ._close_contextMenu_2ee2f9 ._cross_2ee2f9 {
+  position: absolute;
   width: 15px;
   height: 3px;
-  background: black;
-  position: absolute;
+  background: white;
   transform-origin: center;
   content: " ";
-  background: white;
 }
 ._contextMenu_content_2ee2f9 {
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -306,22 +300,22 @@ table {
   align-items: center;
 }
 ._contextMenu_blocInput_2ee2f9 label {
-  margin: 0 0 0 1.25em;
-  text-align: center;
-  width: 24px;
-  height: 28px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  width: 24px;
+  height: 28px;
+  margin: 0 0 0 1.25em;
   font-weight: bold;
+  text-align: center;
 }
 ._contextMenu_blocInput_2ee2f9 input {
   flex: 1;
-  text-align: center;
   max-width: 73px;
   box-sizing: border-box;
+  text-align: center;
 }
 ._contextMenu_blocInput_2ee2f9 input:hover {
   border: 1px solid #ff8800;
