@@ -61,7 +61,6 @@ const $9b26f7b4737a23ee$export$871b5a9be678db21 = (args)=>{
     }
     el.addEventListener(fired, (e)=>{
         if (preventDefault) e.preventDefault();
-        console.log("????");
         for(const key in css)if (Object.hasOwnProperty.call(css, key)) {
             const element = css[key]; //define new styles
             el.style[key] = element;
@@ -99,7 +98,6 @@ class $6d4806093792670e$export$4b08aed5f1ec6952 {
         document.body.insertAdjacentElement("beforeBegin", this.UI);
     }
     constructor(){
-        console.log("init_UI");
         this.UI_body();
     }
 }
@@ -557,7 +555,6 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
     changeGuidesPosition(e5) {
         let initialValue = parseInt(e5.target.value);
         const direction = this.currentItem.dataset.direction;
-        console.log(initialValue);
         this.currentItem.dataset.position = initialValue;
         this.inputEl.value = initialValue;
         direction === "X" ? this.currentItem.style.top = initialValue + "px" : this.currentItem.style.left = initialValue + "px";
@@ -566,7 +563,6 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
     changeGuidesPositionByKeys(e2) {
         let intValue = parseInt(e2.target.value);
         const direction = this.currentItem.dataset.direction;
-        console.log(intValue);
         if (e2.key === "ArrowUp") {
             intValue++;
             this.inputEl.value = intValue;
@@ -702,7 +698,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
      * Trigger addGuides if shift or ctrl as pressed
      * Define the current direction X OR Y
      */ document.addEventListener("mousedown", (e)=>{
-            console.log("down"); //this.showGuides = true;
+            //this.showGuides = true;
             this.ctrlKey && this.add_guides(e, "X");
             this.shiftKey && this.add_guides(e, "Y");
             if (document.querySelectorAll('[data-type="guides"]').length && this.showGuides) this.switch_UI("show");

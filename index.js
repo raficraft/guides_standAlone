@@ -63,7 +63,6 @@ var $08a7d5afccd80df8$export$871b5a9be678db21 = function(args) {
     }
     el.addEventListener(fired, function(e) {
         if (preventDefault) e.preventDefault();
-        console.log("????");
         for(var key in css)if (Object.hasOwnProperty.call(css, key)) {
             var element = css[key]; //define new styles
             el.style[key] = element;
@@ -88,7 +87,6 @@ var $f3f86e883dc3cb37$export$4b08aed5f1ec6952 = /*#__PURE__*/ function() {
     "use strict";
     function $f3f86e883dc3cb37$export$4b08aed5f1ec6952() {
         $iwYpZ$swchelpers.classCallCheck(this, $f3f86e883dc3cb37$export$4b08aed5f1ec6952);
-        console.log("init_UI");
         this.UI_body();
     }
     $iwYpZ$swchelpers.createClass($f3f86e883dc3cb37$export$4b08aed5f1ec6952, [
@@ -404,7 +402,7 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
      * Trigger addGuides if shift or ctrl as pressed
      * Define the current direction X OR Y
      */ document.addEventListener("mousedown", function(e) {
-            console.log("down"); //this.showGuides = true;
+            //this.showGuides = true;
             _this2.ctrlKey && _this2.add_guides(e, "X");
             _this2.shiftKey && _this2.add_guides(e, "Y");
             if (document.querySelectorAll('[data-type="guides"]').length && _this2.showGuides) _this2.switch_UI("show");
@@ -548,7 +546,6 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             value: function changeGuidesPosition(e) {
                 var initialValue = parseInt(e.target.value);
                 var direction = this.currentItem.dataset.direction;
-                console.log(initialValue);
                 this.currentItem.dataset.position = initialValue;
                 this.inputEl.value = initialValue;
                 direction === "X" ? this.currentItem.style.top = initialValue + "px" : this.currentItem.style.left = initialValue + "px";
@@ -560,7 +557,6 @@ var $8c4157cb11a74ad2$export$79bc953678f776f7 = /*#__PURE__*/ function() {
             value: function changeGuidesPositionByKeys(e) {
                 var intValue = parseInt(e.target.value);
                 var direction = this.currentItem.dataset.direction;
-                console.log(intValue);
                 if (e.key === "ArrowUp") {
                     intValue++;
                     this.inputEl.value = intValue;
