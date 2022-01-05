@@ -21,7 +21,7 @@ You can test the plugin directly, at the following address:
 ```javascript
 npm i guides_js_by_raficraft
 ```
-Then you just need to import the module into your index.js or main.js file. The script is compatible with REACT.JS
+Then you just need to import the module into your index.js or main.js file. The script is compatible with REACT.JS. Since the script is in vanilla JS, it is probably also compatible with Vue.js
 ```javascript
 import guides from 'guides_js_by_raficraft'
 ```
@@ -54,3 +54,15 @@ Guides.js is inspired by guides found in **Photoshop**
 *   Custom Context Menu
 *   Drag an drop UI
 *   Local Storage
+
+## Author
+
+Hi, I am a front-end developer specializing in react.js and javascript. What I like the most developed are tools and components designed to improve the productivity of front-line developers. Join me on linkedin so as not to miss any of my work. See you soon !! ^^
+
+[SoftSkill profil](https://app.assessfirst.com/_/profile/d53utubs-raphael-parodi)
+
+[linkedin profil](https://www.linkedin.com/in/raphael-parodi-a942ab1b0/)
+
+
+
+
