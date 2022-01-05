@@ -46,7 +46,7 @@ How to use ?
 # Features of code
 
 
-Features inspired by guides found in **Photoshop**
+Guides.js is inspired by guides found in **Photoshop**
 
 *   Form Scratch ^^
 *   Compatible with React.js
