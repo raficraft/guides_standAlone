@@ -10,14 +10,14 @@ Facilitate your integration work
 Guide.js allows you to insert guides to change their **thickness, color and position** in order to easily align the elements of your page. This feature is directly inspired by the one that can be found in **Photoshop**. ^^
 
 The project is completely made **from scratch** and has no dependencies. And it will be the same for the next modules.
-
-# Demo 
+***
+## Demo 
 
 You can test the plugin directly, at the following address:
 
 [Live Demo](https://flamboyant-saha-06f6cd.netlify.app/)
-
-# Installation
+***
+## Installation
 
 ```javascript
 npm i guides_js_by_raficraft
@@ -28,11 +28,11 @@ Then you just need to import the module into your index.js or main.js file. The 
 ```javascript
 import guides from 'guides_js_by_raficraft'
 ```
+***
+## Use
 
-# Use
+### How to use ?
 
-How to use ?
-------------
 
 *   Use **ctrl** or **shift** key and **left click** in the page to add a **horizontal** or **vertical** Guides.
 *   You can **drag and drop** the Guides
@@ -42,8 +42,8 @@ How to use ?
     *   Change thickness of a guide
     *   Change the color of all guides
 *   You can simultaneously press **ctrl and shift** to show or hide the guides.
-
-# Features of code
+***
+## Features of code
 
 
 Guides.js is inspired by guides found in **Photoshop**

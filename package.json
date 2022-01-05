@@ -1,6 +1,6 @@
 {
   "name": "guides_js_by_raficraft",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "Integration Tools for developer front. Photoshop features for yout browser.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "url": "git+https://github.com/raficraft/guides_standAlone.git"
   },
   "keywords": [
-    "Guides"
+    "Guides",
+    "javascript",
+    "REACT.js",
+    "photoshop",
+    "front-end"
   ],
   "author": "raficraft",
   "license": "ISC",
