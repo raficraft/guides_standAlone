@@ -1,7 +1,7 @@
 {
   "name": "guides_js_by_raficraft",
-  "version": "0.4.6",
-  "description": "Integration Tools for developer front. Photoshop features for yout browser.",
+  "version": "0.4.7",
+  "description": "Integration Tools for developer front. Photoshop features for your browser.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
