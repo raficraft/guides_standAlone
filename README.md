@@ -33,10 +33,10 @@ import guides from 'guides_js_by_raficraft'
 *   Use **ctrl** or **shift** key and **left click** in the page to add a **horizontal** or **vertical** Guides.
 *   You can **drag and drop** the Guides
 *   if you **right click** on a guide. This will open a **submenu** that will allow you to:
-    *  Change the position
-    *  Delete a guide
-    *  Change thickness of a guide
-    *  Change the color of all guides
+    *   Change the position
+    *   Delete a guide
+    *   Change thickness of a guide
+    *   Change the color of all guides
 *   You can simultaneously press **ctrl and shift** to show or hide the guides.
 ***
 ## Features of code
@@ -44,15 +44,13 @@ import guides from 'guides_js_by_raficraft'
 
 Guides.js is inspired by guides found in **Photoshop**
 
-*  Form Scratch ^^
-*  Compatible with React.js
-*  No dependencies
-*  POO
-*  Sass
-*  Magic function to create HTML elements from a string
-*  Dynamical CSS from scratch
-*  Custom Context Menu
-*  Drag an drop UI
-*  Local Storage
-
-## All sources
+*   Form Scratch ^^
+*   Compatible with React.js
+*   No dependencies
+*   POO
+*   Sass
+*   Magic function to create HTML elements from a string
+*   Dynamical CSS from scratch
+*   Custom Context Menu
+*   Drag an drop UI
+*   Local Storage
