@@ -295,7 +295,9 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
         $9b26f7b4737a23ee$export$84a19d80a0fc97e6('[data-type="contextmenu"]');
         const X = e1.pageX > window.innerWidth - 100 ? `${e1.pageX - 150}px` : `${e1.pageX}px`;
         const Y = e1.pageY > window.innerHeight - 200 ? `${e1.pageY - 200}px` : `${e1.pageY}px`;
-        const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section class="${$e0e8cc12b16392dc$export$218b899e1d476006}"
+        const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section 
+        id="contextMenu"
+        class="${$e0e8cc12b16392dc$export$218b899e1d476006}"
         style="${$0b1328cf225e4578$export$bcbbd831497ce88.contextMenu(X, Y)}"  
         data-type="contextmenu"
         draggable="true"
@@ -432,7 +434,7 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
         ];
     }
     deployStorage(items, color2) {
-        if (items) {
+        if (items && localStorage.getItem("guides")) {
             let el_STRING = [];
             let nbGuides = 0;
             items.forEach((item)=>{
@@ -604,19 +606,18 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
         } //If the last guides as delete
         if (!document.querySelectorAll('[data-type="guides"]').length) {
             //Remove storage
-            const UI = document.querySelector('[data-type="UI"]');
-            UI.remove();
             localStorage.removeItem("guides");
             if (this.showContextMenu) {
                 this.showContextMenu = false;
-                $9b26f7b4737a23ee$export$84a19d80a0fc97e6(".contextMenu");
+                const contextMenu = document.getElementById("contextMenu");
+                contextMenu.remove();
             }
         } //Check if user exprience is good
     //this.contextMenu.remove();
     }
     changeThickness(e3) {
         const direction = this.currentItem.dataset.offsetby;
-        const newVal = e3.target.value;
+        const newVal = e3.target.value; //
         const newThickness = 4 + parseInt(e3.target.value);
         const newGradient = `linear-gradient(
     to ${direction},
@@ -716,9 +717,11 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 if (this.currentItem.dataset.direction === "X") {
                     this.currentItem.style.top = e.pageY + "px";
                     this.currentItem.dataset.position = e.pageY;
+                    if (this.showContextMenu) this.inputEl.value = e.pageY;
                 } else if (this.currentItem.dataset.direction === "Y") {
                     this.currentItem.style.left = e.pageX + "px";
                     this.currentItem.dataset.position = e.pageX;
+                    if (this.showContextMenu) this.inputEl.value = e.pageX;
                 }
             }
         }), 300);
@@ -730,11 +733,13 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 this.contextMenu = this.getContextMenu[0];
                 this.interactiveElement = this.getContextMenu[1];
                 this.UI_body.insertAdjacentElement("afterBegin", this.contextMenu);
-                this.inputEl = this.interactiveElement.change_position;
                 this.interactiveElement.change_thickness.value = this.currentItem.dataset.height; //add event for interactive of contextMenu
-                this.inputEl.value = this.currentItem.dataset.position;
-                this.inputEl.focus();
-                this.UI_body.querySelector('label[for="position_guides"]').textContent = this.currentItem.dataset.direction === "X" ? "Y" : "X";
+                if (this.showContextMenu) {
+                    this.inputEl = this.interactiveElement.change_position;
+                    this.inputEl.value = this.currentItem.dataset.position;
+                    this.inputEl.focus();
+                    this.UI_body.querySelector('label[for="position_guides"]').textContent = this.currentItem.dataset.direction === "X" ? "Y" : "X";
+                }
                 this.inputEl.addEventListener("keyup", (e)=>{
                     this.changeGuidesPositionByKeys(e);
                 });
@@ -760,9 +765,6 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
 }
 
 
-if (null) null.accept(function() {
-    window.location.reload();
-});
 new $6d4806093792670e$export$4b08aed5f1ec6952();
 new $0821797f8ef150f0$export$79bc953678f776f7();
 
