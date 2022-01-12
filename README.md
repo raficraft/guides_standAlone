@@ -65,13 +65,11 @@ Hi, I am a front-end developer specializing in react.js and javascript. What I l
 ***
 
 ## Patch Notes 
----
 
 <br>
 
 ### 01-12-22
 <br>
-
 
 *   Fix Error when deleting the last guides.
 *   Update the value in context menu, when your move a guides.
