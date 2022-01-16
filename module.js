@@ -245,8 +245,8 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
         let stylesSpan_Axis = {
         };
         direction === "X" ? offsetBy = "top" : offsetBy = "left";
-        direction === "X" ? position = e2.pageY : position = e2.pageX;
-        direction === "X" ? stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_X(e2.pageY, color, 1) : stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_Y(e2.pageX, color, 1);
+        direction === "X" ? position = e2.clientY : position = e2.clientX;
+        direction === "X" ? stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_X(e2.clientY, color, 1) : stylesSpan_Axis = $0b1328cf225e4578$export$bcbbd831497ce88.span_axis_Y(e2.clientX, color, 1);
         const el_STRING = `<span
         class="${$e0e8cc12b16392dc$export$6bd0430c083ef3cf}"
         style="${stylesSpan_Axis}"
@@ -293,8 +293,8 @@ class $4e3a677398d46132$export$69e780ca9f7a6d74 {
     }
     get_contextMenu(e1) {
         $9b26f7b4737a23ee$export$84a19d80a0fc97e6('[data-type="contextmenu"]');
-        const X = e1.pageX > window.innerWidth - 100 ? `${e1.pageX - 150}px` : `${e1.pageX}px`;
-        const Y = e1.pageY > window.innerHeight - 200 ? `${e1.pageY - 200}px` : `${e1.pageY}px`;
+        const X = e1.clientX > window.innerWidth - 100 ? `${e1.clientX - 150}px` : `${e1.clientX}px`;
+        const Y = e1.clientY > window.innerHeight - 200 ? `${e1.clientY - 200}px` : `${e1.clientY}px`;
         const el_STRING = $9b26f7b4737a23ee$export$adc6d72e517d4e6a(`<section 
         id="contextMenu"
         class="${$e0e8cc12b16392dc$export$218b899e1d476006}"
@@ -508,11 +508,14 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             item1.style.cursor = "pointer";
             this.controlUser.grab = true;
             this.controlUser.hover = true;
-        }); // Mouse Down
+        }); // Mouse Down, Moving the guides
         item1.addEventListener("mousedown", (e)=>{
             e.preventDefault();
+            console.log("move");
             this.currentItem = item1;
+            console.log("bug !!!", this.showContextMenu);
             if (this.showContextMenu) {
+                console.log("bug????");
                 this.interactiveElement.change_thickness.value = item1.dataset.height;
                 this.interactiveElement.change_position.value = item1.dataset.position;
                 this.UI_body.querySelector('label[for="position_guides"]').textContent = item1.dataset.direction === "X" ? "Y" : "X";
@@ -715,13 +718,13 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
             e.preventDefault();
             if (this.controlUser.grab && this.controlUser.move) {
                 if (this.currentItem.dataset.direction === "X") {
-                    this.currentItem.style.top = e.pageY + "px";
-                    this.currentItem.dataset.position = e.pageY;
-                    if (this.showContextMenu) this.inputEl.value = e.pageY;
+                    this.currentItem.style.top = e.clientY + "px";
+                    this.currentItem.dataset.position = e.clientY;
+                    if (this.showContextMenu) this.inputEl.value = e.clientY;
                 } else if (this.currentItem.dataset.direction === "Y") {
-                    this.currentItem.style.left = e.pageX + "px";
-                    this.currentItem.dataset.position = e.pageX;
-                    if (this.showContextMenu) this.inputEl.value = e.pageX;
+                    this.currentItem.style.left = e.clientX + "px";
+                    this.currentItem.dataset.position = e.clientX;
+                    if (this.showContextMenu) this.inputEl.value = e.clientX;
                 }
             }
         }), 300);
@@ -735,6 +738,7 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 this.UI_body.insertAdjacentElement("afterBegin", this.contextMenu);
                 this.interactiveElement.change_thickness.value = this.currentItem.dataset.height; //add event for interactive of contextMenu
                 if (this.showContextMenu) {
+                    console.log("bug");
                     this.inputEl = this.interactiveElement.change_position;
                     this.inputEl.value = this.currentItem.dataset.position;
                     this.inputEl.focus();
@@ -757,6 +761,12 @@ class $0821797f8ef150f0$export$79bc953678f776f7 {
                 });
                 this.interactiveElement.close_contextMenu.addEventListener("click", (e)=>{
                     this.contextMenu.remove();
+                    this.showContextMenu = false;
+                    this.controlUser = {
+                        grab: null,
+                        move: null,
+                        hover: null
+                    };
                 });
             }
         }); //localStorage.clear()

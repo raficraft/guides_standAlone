@@ -1,6 +1,11 @@
 # Guide_JS (code source)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/358228bef6f44d64b8d7a9559576438f)](https://www.codacy.com/gh/raficraft/GUIDES_JS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=raficraft/GUIDES_JS&amp;utm_campaign=Badge_Grade)
 
+
+**NB : if your version has inferior to 0.7. Remove your localhost**
+
+***
+
 Facilitate your integration work
 --------------------------------
 
@@ -68,11 +73,17 @@ Hi, I am a front-end developer specializing in react.js and javascript. What I l
 
 <br>
 
+### 01-16-22
+<br>
+
+*   Fix Error when you close sub menu , guides don't move.
+
 ### 01-12-22
 <br>
 
 *   Fix Error when deleting the last guides.
 *   Update the value in context menu, when your move a guides.
+*   Change e.pageY and e.pageX value responsible for many bugs, by e.clientX and e.clientY 
 
   
 
